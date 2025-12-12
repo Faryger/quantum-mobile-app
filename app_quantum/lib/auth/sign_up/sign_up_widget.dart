@@ -6,6 +6,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 import 'sign_up_model.dart';
 export 'sign_up_model.dart';
 
@@ -571,41 +572,87 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     children: [
-                      Container(
-                        width: double.infinity,
-                        height: 56.0,
-                        decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                            colors: [
-                              FlutterFlowTheme.of(context).accent1,
-                              Color(0xFF8D6FE0)
-                            ],
-                            stops: [0.0, 1.0],
-                            begin: AlignmentDirectional(-1.0, 0.0),
-                            end: AlignmentDirectional(1.0, 0),
+                      InkWell(
+                        onTap: () async {
+                          final email = _model.textController2.text;
+                          final password = _model.textController3.text;
+                          final confirmPassword = _model.textController4.text;
+
+                          if (email.isEmpty || password.isEmpty) {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(content: Text('Por favor llena todos los campos')),
+                            );
+                            return;
+                          }
+
+                          if (password != confirmPassword) {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(content: Text('Las contraseñas no coinciden')),
+                            );
+                            return;
+                          }
+
+                          try {
+                            await Supabase.instance.client.auth.signUp(
+                              email: email,
+                              password: password,
+                              data: {'username': _model.textController1.text},
+                            );
+                            if (context.mounted) {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(content: Text('Cuenta creada exitosamente. Revisa tu email.')),
+                              );
+                            }
+                          } on AuthException catch (e) {
+                            if (context.mounted) {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(content: Text(e.message)),
+                              );
+                            }
+                          } catch (e) {
+                            if (context.mounted) {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(content: Text('Ocurrió un error inesperado')),
+                              );
+                            }
+                          }
+                        },
+                        child: Container(
+                          width: double.infinity,
+                          height: 56.0,
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              colors: [
+                                FlutterFlowTheme.of(context).accent1,
+                                Color(0xFF8D6FE0)
+                              ],
+                              stops: [0.0, 1.0],
+                              begin: AlignmentDirectional(-1.0, 0.0),
+                              end: AlignmentDirectional(1.0, 0),
+                            ),
+                            borderRadius: BorderRadius.circular(16.0),
                           ),
-                          borderRadius: BorderRadius.circular(16.0),
-                        ),
-                        child: Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
-                          child: Text(
-                            'Crear Cuenta',
-                            style: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .override(
-                                  font: GoogleFonts.lato(
+                          child: Align(
+                            alignment: AlignmentDirectional(0.0, 0.0),
+                            child: Text(
+                              'Crear Cuenta',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    font: GoogleFonts.lato(
+                                      fontWeight: FontWeight.bold,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .fontStyle,
+                                    ),
+                                    fontSize: 18.0,
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.bold,
                                     fontStyle: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .fontStyle,
                                   ),
-                                  fontSize: 18.0,
-                                  letterSpacing: 0.0,
-                                  fontWeight: FontWeight.bold,
-                                  fontStyle: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .fontStyle,
-                                ),
+                            ),
                           ),
                         ),
                       ),

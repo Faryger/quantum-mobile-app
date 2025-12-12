@@ -5,6 +5,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 import 'forgot_pass_model.dart';
 export 'forgot_pass_model.dart';
 
@@ -252,39 +253,64 @@ class _ForgotPassWidgetState extends State<ForgotPassWidget> {
                 ),
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 50.0),
-                  child: Container(
-                    width: double.infinity,
-                    height: 56.0,
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        colors: [
-                          FlutterFlowTheme.of(context).accent1,
-                          Color(0xFF8D6FE0)
-                        ],
-                        stops: [0.0, 1.0],
-                        begin: AlignmentDirectional(-1.0, 0.0),
-                        end: AlignmentDirectional(1.0, 0),
+                  child: InkWell(
+                    onTap: () async {
+                      final email = _model.textController.text;
+                      if (email.isEmpty) {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(content: Text('Ingresa tu email')),
+                        );
+                        return;
+                      }
+                      try {
+                        await Supabase.instance.client.auth.resetPasswordForEmail(email);
+                        if (context.mounted) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(content: Text('Link de recuperación enviado')),
+                          );
+                        }
+                      } catch (e) {
+                        if (context.mounted) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(content: Text('Error al enviar el correo')),
+                          );
+                        }
+                      }
+                    },
+                    child: Container(
+                      width: double.infinity,
+                      height: 56.0,
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          colors: [
+                            FlutterFlowTheme.of(context).accent1,
+                            Color(0xFF8D6FE0)
+                          ],
+                          stops: [0.0, 1.0],
+                          begin: AlignmentDirectional(-1.0, 0.0),
+                          end: AlignmentDirectional(1.0, 0),
+                        ),
+                        borderRadius: BorderRadius.circular(16.0),
                       ),
-                      borderRadius: BorderRadius.circular(16.0),
-                    ),
-                    child: Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
-                      child: Text(
-                        'Enviar',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              font: GoogleFonts.lato(
+                      child: Align(
+                        alignment: AlignmentDirectional(0.0, 0.0),
+                        child: Text(
+                          'Enviar',
+                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                font: GoogleFonts.lato(
+                                  fontWeight: FontWeight.bold,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .fontStyle,
+                                ),
+                                fontSize: 18.0,
+                                letterSpacing: 0.0,
                                 fontWeight: FontWeight.bold,
                                 fontStyle: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .fontStyle,
                               ),
-                              fontSize: 18.0,
-                              letterSpacing: 0.0,
-                              fontWeight: FontWeight.bold,
-                              fontStyle: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .fontStyle,
-                            ),
+                        ),
                       ),
                     ),
                   ),
