@@ -7,6 +7,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 import 'sign_in_model.dart';
 export 'sign_in_model.dart';
 
@@ -356,7 +357,31 @@ class _SignInWidgetState extends State<SignInWidget> {
                         hoverColor: Colors.transparent,
                         highlightColor: Colors.transparent,
                         onTap: () async {
-                          context.goNamed(HomePageWidget.routeName);
+                          final email = _model.textController1.text;
+                          final password = _model.textController2.text;
+
+                          if (email.isEmpty || password.isEmpty) {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(content: Text('Ingresa usuario y contraseña')),
+                            );
+                            return;
+                          }
+
+                          try {
+                            await Supabase.instance.client.auth.signInWithPassword(
+                              email: email,
+                              password: password,
+                            );
+                            context.goNamed(HomePageWidget.routeName);
+                          } on AuthException catch (e) {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(content: Text(e.message)),
+                            );
+                          } catch (e) {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(content: Text('Error inesperado al iniciar sesión')),
+                            );
+                          }
                         },
                         child: Container(
                           width: double.infinity,

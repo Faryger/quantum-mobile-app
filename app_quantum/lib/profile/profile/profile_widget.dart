@@ -6,6 +6,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 import 'profile_model.dart';
 export 'profile_model.dart';
 
@@ -251,8 +252,11 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 16.0, 0.0, 0.0),
                               child: FFButtonWidget(
-                                onPressed: () {
-                                  print('Button pressed ...');
+                                onPressed: () async {
+                                  await Supabase.instance.client.auth.signOut();
+                                  if (context.mounted) {
+                                    context.goNamed('signIn');
+                                  }
                                 },
                                 text: 'Cerrar Sesion',
                                 options: FFButtonOptions(
