@@ -5,6 +5,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'profile_model.dart';
@@ -23,6 +24,7 @@ class ProfileWidget extends StatefulWidget {
 
 class _ProfileWidgetState extends State<ProfileWidget> {
   late ProfileModel _model;
+  String? _avatarUrl;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -30,6 +32,9 @@ class _ProfileWidgetState extends State<ProfileWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => ProfileModel());
+
+    // Cargar la URL actual si existe
+    _avatarUrl = Supabase.instance.client.auth.currentUser?.userMetadata?['avatar_url'];
   }
 
   @override
@@ -37,6 +42,48 @@ class _ProfileWidgetState extends State<ProfileWidget> {
     _model.dispose();
 
     super.dispose();
+  }
+
+  Future<void> _uploadProfileImage() async {
+    final picker = ImagePicker();
+    final pickedFile = await picker.pickImage(source: ImageSource.gallery);
+
+    if (pickedFile == null) return;
+
+    final bytes = await pickedFile.readAsBytes();
+    final user = Supabase.instance.client.auth.currentUser;
+    if (user == null) return;
+
+    try {
+      final fileName = '${user.id}_${DateTime.now().millisecondsSinceEpoch}.jpg';
+      
+      // 1. Subir imagen al bucket 'avatars'
+      await Supabase.instance.client.storage.from('avatars').uploadBinary(
+        fileName,
+        bytes,
+        fileOptions: const FileOptions(contentType: 'image/jpeg'),
+      );
+
+      // 2. Obtener URL pública
+      final publicUrl = Supabase.instance.client.storage.from('avatars').getPublicUrl(fileName);
+
+      // 3. Actualizar usuario
+      await Supabase.instance.client.auth.updateUser(
+        UserAttributes(data: {'avatar_url': publicUrl}),
+      );
+
+      setState(() => _avatarUrl = publicUrl);
+      
+      if (mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Foto actualizada')));
+    } on StorageException catch (e) {
+      if (mounted) {
+        // Manejo específico para errores de Storage (como bucket no encontrado)
+        final message = e.statusCode == '404' ? 'Error: El bucket "avatars" no existe en Supabase.' : 'Error de almacenamiento: ${e.message}';
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(message)));
+      }
+    } catch (e) {
+      if (mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Error: $e')));
+    }
   }
 
   @override
@@ -85,16 +132,19 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                     children: [
                       Align(
                         alignment: AlignmentDirectional(0.0, -1.0),
-                        child: Container(
-                          width: 100.0,
-                          height: 100.0,
-                          clipBehavior: Clip.antiAlias,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                          ),
-                          child: Image.network(
-                            'https://picsum.photos/seed/674/600',
-                            fit: BoxFit.cover,
+                        child: InkWell(
+                          onTap: _uploadProfileImage,
+                          child: Container(
+                            width: 100.0,
+                            height: 100.0,
+                            clipBehavior: Clip.antiAlias,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                            ),
+                            child: Image.network(
+                              _avatarUrl ?? 'https://picsum.photos/seed/674/600',
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         ),
                       ),
@@ -142,7 +192,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                   children: [
                                     Expanded(
                                       child: Text(
-                                        'abcd@email.com',
+                                        Supabase.instance.client.auth.currentUser?.email ?? 'No disponible',
                                         style: FlutterFlowTheme.of(context)
                                             .headlineMedium
                                             .override(
