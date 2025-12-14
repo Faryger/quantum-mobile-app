@@ -11,7 +11,12 @@ import 'resultado_codigo_model.dart';
 export 'resultado_codigo_model.dart';
 
 class ResultadoCodigoWidget extends StatefulWidget {
-  const ResultadoCodigoWidget({super.key});
+  const ResultadoCodigoWidget({
+    super.key,
+    required this.scannedCode,
+  });
+
+  final String? scannedCode;
 
   static String routeName = 'resultadoCodigo';
   static String routePath = '/resultadoCodigo';
@@ -66,7 +71,7 @@ class _ResultadoCodigoWidgetState extends State<ResultadoCodigoWidget> {
             },
           ),
           title: Text(
-            'Page Title',
+            'Resultado',
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   font: GoogleFonts.lato(
                     fontWeight:
@@ -105,7 +110,7 @@ class _ResultadoCodigoWidgetState extends State<ResultadoCodigoWidget> {
                       padding:
                           EdgeInsetsDirectional.fromSTEB(40.0, 80.0, 40.0, 0.0),
                       child: Text(
-                        'La asistencia se ha registrado correctamente',
+                        'Asistencia Registrada con el código: \n\n${widget.scannedCode}',
                         textAlign: TextAlign.center,
                         style: FlutterFlowTheme.of(context).titleLarge.override(
                               font: GoogleFonts.lato(
