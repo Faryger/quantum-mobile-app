@@ -7,6 +7,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 import 'home_page_model.dart';
 export 'home_page_model.dart';
 
@@ -84,7 +85,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           ),
                     ),
                     Text(
-                      'Daniel Flores',
+                      Supabase.instance.client.auth.currentUser?.userMetadata?['username'] ?? 'Usuario',
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             font: GoogleFonts.lato(
                               fontWeight: FlutterFlowTheme.of(context)
