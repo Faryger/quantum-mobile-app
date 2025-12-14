@@ -30,7 +30,7 @@ if (keystorePropertiesFile.exists()) {
 
 android {
     namespace "com.mycompany.appquantum"
-    compileSdkVersion 35
+    compileSdkVersion flutter.compileSdkVersion
     
 
     compileOptions {
@@ -55,8 +55,8 @@ android {
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "com.mycompany.appquantum"
-        minSdkVersion 23
-        targetSdkVersion 35
+        minSdkVersion flutter.minSdkVersion
+        targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
     }
@@ -82,6 +82,13 @@ android {
 
 flutter {
     source '../..'
+}
+
+configurations.all {
+    resolutionStrategy {
+        force 'androidx.activity:activity:1.10.0'
+        force 'androidx.activity:activity-ktx:1.10.0'
+    }
 }
 
 dependencies {
