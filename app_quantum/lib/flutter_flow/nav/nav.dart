@@ -88,6 +88,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => ProfileWidget(),
         ),
         FFRoute(
+          name: AsistenciaWidget.routeName,
+          path: AsistenciaWidget.routePath,
+          builder: (context, params) => AsistenciaWidget(),
+        ),
+        FFRoute(
           name: ResultadoCodigoWidget.routeName,
           path: '${ResultadoCodigoWidget.routePath}/:scannedCode',
           builder: (context, params) => ResultadoCodigoWidget(

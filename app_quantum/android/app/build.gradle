@@ -30,6 +30,7 @@ if (keystorePropertiesFile.exists()) {
 
 android {
     namespace "com.mycompany.appquantum"
+    compileSdkVersion 36
     compileSdkVersion flutter.compileSdkVersion
     
 
@@ -56,6 +57,7 @@ android {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "com.mycompany.appquantum"
         minSdkVersion flutter.minSdkVersion
+        targetSdkVersion 36
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
