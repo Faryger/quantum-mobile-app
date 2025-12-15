@@ -1,3 +1,4 @@
+import '/backend/supabase/database/tables/asistencia.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -25,9 +26,10 @@ class ResultadoCodigoWidget extends StatefulWidget {
 
 class _ResultadoCodigoWidgetState extends State<ResultadoCodigoWidget> {
   late ResultadoCodigoModel _model;
-  String _registrationType = 'Asistencia';
-  String _registrationTime = '';
-  String _registrationDate = '';
+  String _messageTitle = 'Procesando...';
+  String _messageSubtitle = '';
+  IconData _messageIcon = Icons.hourglass_empty;
+  Color _messageIconColor = Colors.grey;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -36,17 +38,124 @@ class _ResultadoCodigoWidgetState extends State<ResultadoCodigoWidget> {
     super.initState();
     _model = createModel(context, () => ResultadoCodigoModel());
     _processScannedCode();
-    final now = DateTime.now();
-    _registrationTime = DateFormat('h:mm a').format(now);
-    _registrationDate = DateFormat('EEEE, d \'de\' MMMM', 'es_ES').format(now);
   }
 
-  void _processScannedCode() {
+  Future<void> _processScannedCode() async {
     final code = widget.scannedCode ?? '';
+    final now = DateTime.now();
+    final todayStart = DateTime(now.year, now.month, now.day);
+    final todayEnd = todayStart.add(Duration(days: 1));
+
+    final asistenciaTable = AsistenciaTable();
+    String registrationId = code.replaceAll('entrada', '').replaceAll('salida', '').trim();
+
     if (code.toLowerCase().contains('entrada')) {
-      _registrationType = 'Entrada';
+      // Check for existing entry today
+      final existingEntries = await asistenciaTable.queryRows(
+        queryFn: (q) => q
+            .eq('scanned_id', registrationId)
+            .gte('entry_time', todayStart.toIso8601String())
+            .lt('entry_time', todayEnd.toIso8601String()),
+      );
+
+      if (existingEntries.isNotEmpty) {
+        setState(() {
+          _messageTitle = 'Entrada ya registrada';
+          _messageSubtitle = 'Ya has registrado tu entrada el día de hoy.';
+          _messageIcon = Icons.warning_amber_rounded;
+          _messageIconColor = Colors.orange;
+        });
+        return;
+      }
+
+      // Insert new entry
+      try {
+        await asistenciaTable.insert({
+          'scanned_id': registrationId,
+          'entry_time': now.toIso8601String(),
+        });
+        setState(() {
+          _messageTitle = 'Entrada Registrada';
+          _messageSubtitle =
+              '${DateFormat('EEEE, d \'de\' MMMM', 'es_ES').format(now)} a las ${DateFormat('h:mm a').format(now)}';
+          _messageIcon = Icons.check_rounded;
+          _messageIconColor = Color(0xFF4CAF50);
+        });
+      } catch (e) {
+        setState(() {
+          _messageTitle = 'Error';
+          _messageSubtitle = 'No se pudo registrar la entrada.';
+          _messageIcon = Icons.error_outline;
+          _messageIconColor = Colors.red;
+        });
+      }
     } else if (code.toLowerCase().contains('salida')) {
-      _registrationType = 'Salida';
+      // Find open entry for today
+      final entriesToUpdate = await asistenciaTable.queryRows(
+        queryFn: (q) => q
+            .eq('scanned_id', registrationId)
+            .gte('entry_time', todayStart.toIso8601String())
+            .lt('entry_time', todayEnd.toIso8601String())
+            .is_('exit_time', null),
+        limit: 1,
+      );
+
+      if (entriesToUpdate.isNotEmpty) {
+        final entryToUpdate = entriesToUpdate.first;
+        try {
+          await asistenciaTable.update(
+            data: {'exit_time': now.toIso8601String()},
+            matchingRows: (q) => q.eq('id', entryToUpdate.id),
+          );
+          setState(() {
+            _messageTitle = 'Salida Registrada';
+            _messageSubtitle =
+                '${DateFormat('EEEE, d \'de\' MMMM', 'es_ES').format(now)} a las ${DateFormat('h:mm a').format(now)}';
+            _messageIcon = Icons.check_rounded;
+            _messageIconColor = Color(0xFF4CAF50);
+          });
+        } catch (e) {
+          setState(() {
+            _messageTitle = 'Error';
+            _messageSubtitle = 'No se pudo registrar la salida.';
+            _messageIcon = Icons.error_outline;
+            _messageIconColor = Colors.red;
+          });
+        }
+      } else {
+         // Check if they already clocked out
+        final alreadyExitedEntries = await asistenciaTable.queryRows(
+          queryFn: (q) => q
+              .eq('scanned_id', registrationId)
+              .gte('entry_time', todayStart.toIso8601String())
+              .lt('entry_time', todayEnd.toIso8601String())
+              .not()
+              .is_('exit_time', null),
+        );
+
+        if (alreadyExitedEntries.isNotEmpty) {
+           setState(() {
+            _messageTitle = 'Salida ya registrada';
+            _messageSubtitle = 'Ya has registrado tu salida el día de hoy.';
+            _messageIcon = Icons.warning_amber_rounded;
+            _messageIconColor = Colors.orange;
+          });
+        } else {
+           setState(() {
+            _messageTitle = 'Sin entrada previa';
+            _messageSubtitle = 'No se encontró una entrada registrada para hoy.';
+            _messageIcon = Icons.error_outline;
+            _messageIconColor = Colors.red;
+          });
+        }
+      }
+    } else {
+       setState(() {
+        _messageTitle = 'Código QR no válido';
+        _messageSubtitle = 'El código no contiene "entrada" o "salida".';
+        _messageIcon = Icons.error_outline;
+        _messageIconColor = Colors.red;
+      });
     }
   }
 
@@ -72,7 +181,6 @@ class _ResultadoCodigoWidgetState extends State<ResultadoCodigoWidget> {
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              // Spacer to push content to center
               SizedBox(),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 24.0),
@@ -86,25 +194,25 @@ class _ResultadoCodigoWidgetState extends State<ResultadoCodigoWidget> {
                         color: Color(0x1AFFFFFF),
                         shape: BoxShape.circle,
                         border: Border.all(
-                          color: Color(0xFF4CAF50),
+                          color: _messageIconColor,
                           width: 3.0,
                         ),
                       ),
                       child: Icon(
-                        Icons.check_rounded,
-                        color: Color(0xFF4CAF50),
+                        _messageIcon,
+                        color: _messageIconColor,
                         size: 80.0,
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(top: 32.0),
                       child: Text(
-                        '${_registrationType} Registrada',
+                        _messageTitle,
                         textAlign: TextAlign.center,
                         style: FlutterFlowTheme.of(context)
                             .displaySmall
                             .override(
-                              font: GoogleFonts.lato(),
+                              fontFamily: 'Lato',
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
                             ),
@@ -113,9 +221,10 @@ class _ResultadoCodigoWidgetState extends State<ResultadoCodigoWidget> {
                     Padding(
                       padding: const EdgeInsets.only(top: 16.0),
                       child: Text(
-                        '$_registrationDate a las $_registrationTime',
+                        _messageSubtitle,
+                        textAlign: TextAlign.center,
                         style: FlutterFlowTheme.of(context).titleMedium.override(
-                              font: GoogleFonts.lato(),
+                              fontFamily: 'Lato',
                               color: FlutterFlowTheme.of(context).secondaryText,
                             ),
                       ),
@@ -127,7 +236,7 @@ class _ResultadoCodigoWidgetState extends State<ResultadoCodigoWidget> {
                 padding: const EdgeInsets.all(24.0),
                 child: FFButtonWidget(
                   onPressed: () async {
-                    context.goNamed(CameraScanWidget.routeName);
+                    context.goNamed(HomePageWidget.routeName);
                   },
                   text: 'Finalizar',
                   options: FFButtonOptions(
@@ -137,7 +246,7 @@ class _ResultadoCodigoWidgetState extends State<ResultadoCodigoWidget> {
                     textStyle: FlutterFlowTheme.of(context)
                         .titleSmall
                         .override(
-                          font: GoogleFonts.lato(),
+                          fontFamily: 'Lato',
                           color: Colors.white,
                           fontSize: 18.0,
                           fontWeight: FontWeight.bold,

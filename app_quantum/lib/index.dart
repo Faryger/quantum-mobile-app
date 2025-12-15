@@ -11,3 +11,4 @@ export '/q_r_scanner/camera_scan/camera_scan_widget.dart' show CameraScanWidget;
 export '/profile/profile/profile_widget.dart' show ProfileWidget;
 export '/pag/resultado_codigo/resultado_codigo_widget.dart'
     show ResultadoCodigoWidget;
+export '/asistencia/asistencia_widget.dart' show AsistenciaWidget;
