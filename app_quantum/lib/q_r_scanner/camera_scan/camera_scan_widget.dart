@@ -97,7 +97,14 @@ class _CameraScanWidgetState extends State<CameraScanWidget> {
                     ScanMode.QR,
                   );
 
-                  context.pushNamed(ResultadoCodigoWidget.routeName);
+                  if (_model.resultado != null && _model.resultado != '-1') {
+                    context.pushNamed(
+                      ResultadoCodigoWidget.routeName,
+                      pathParameters: {
+                        'scannedCode': _model.resultado!,
+                      }.withoutNulls,
+                    );
+                  }
 
                   safeSetState(() {});
                 },

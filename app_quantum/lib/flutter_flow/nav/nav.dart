@@ -89,8 +89,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         ),
         FFRoute(
           name: ResultadoCodigoWidget.routeName,
-          path: ResultadoCodigoWidget.routePath,
-          builder: (context, params) => ResultadoCodigoWidget(),
+          path: '${ResultadoCodigoWidget.routePath}/:scannedCode',
+          builder: (context, params) => ResultadoCodigoWidget(
+            scannedCode: params.getParam(
+              'scannedCode',
+              ParamType.String,
+            ),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
