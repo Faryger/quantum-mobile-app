@@ -96,7 +96,7 @@ class _ResultadoCodigoWidgetState extends State<ResultadoCodigoWidget> {
             .eq('scanned_id', registrationId)
             .gte('entry_time', todayStart.toIso8601String())
             .lt('entry_time', todayEnd.toIso8601String())
-            .is_('exit_time', null),
+            .isFilter('exit_time', null),
         limit: 1,
       );
 
@@ -129,8 +129,7 @@ class _ResultadoCodigoWidgetState extends State<ResultadoCodigoWidget> {
               .eq('scanned_id', registrationId)
               .gte('entry_time', todayStart.toIso8601String())
               .lt('entry_time', todayEnd.toIso8601String())
-              .not()
-              .is_('exit_time', null),
+              .not('exit_time', 'is', null),
         );
 
         if (alreadyExitedEntries.isNotEmpty) {

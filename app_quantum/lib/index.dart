@@ -1,9 +1,9 @@
 // Export pages
-export '/home/home_page/home_page_widget.dart' show HomePageWidget;
-export '/auth/sign_in/sign_in_widget.dart' show SignInWidget;
-export '/auth/sign_up/sign_up_widget.dart' show SignUpWidget;
-export '/auth/forgot_pass/forgot_pass_widget.dart' show ForgotPassWidget;
-export '/auth/forgot_pass_step3/forgot_pass_step3_widget.dart'
+export 'home/home_page/home_page_widget.dart' show HomePageWidget;
+export 'auth/sign_in/sign_in_widget.dart' show SignInWidget;
+export 'auth/sign_up/sign_up_widget.dart' show SignUpWidget;
+export 'auth/forgot_pass/forgot_pass_widget.dart' show ForgotPassWidget;
+export 'auth/forgot_pass_step3/forgot_pass_step3_widget.dart'
     show ForgotPassStep3Widget;
 export '/permisos/permises_list/permises_list_widget.dart'
     show PermisesListWidget;

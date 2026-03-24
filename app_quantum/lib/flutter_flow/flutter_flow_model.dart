@@ -36,6 +36,9 @@ T createModel<T extends FlutterFlowModel>(
 }
 
 abstract class FlutterFlowModel<W extends Widget> {
+  // FOCUS MANAGEMENT
+  // Focus node to manage user focus behavior
+  final unfocusNode = FocusNode();
   // Initialization methods
   bool _isInitialized = false;
   void initState(BuildContext context);
@@ -65,7 +68,9 @@ abstract class FlutterFlowModel<W extends Widget> {
   // disposed. By default this is true for pages and false for components,
   // as page/component models handle the disposal of their children.
   bool disposeOnWidgetDisposal = true;
-  void dispose();
+  void dispose() {
+    unfocusNode.dispose();
+  }
   void maybeDispose() {
     if (disposeOnWidgetDisposal) {
       dispose();
