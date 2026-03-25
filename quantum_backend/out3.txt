@@ -1,0 +1,4 @@
+127.0.0.1 empty FAIL: MySQLServerException [1045]: Access denied for user 'root'@'localhost' (using password: YES)
+127.0.0.1 root FAIL: MySQLServerException [1045]: Access denied for user 'root'@'localhost' (using password: YES)
+localhost empty FAIL: MySQLServerException [1045]: Access denied for user 'root'@'localhost' (using password: YES)
+localhost root FAIL: MySQLServerException [1045]: Access denied for user 'root'@'localhost' (using password: YES)

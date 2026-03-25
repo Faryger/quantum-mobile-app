@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import '../../backend/api_client.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
@@ -34,7 +35,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
     _model = createModel(context, () => ProfileModel());
 
     // Cargar la URL actual si existe
-    _avatarUrl = Supabase.instance.client.auth.currentUser?.userMetadata?['avatar_url'];
+    _avatarUrl = null;
   }
 
   @override
@@ -51,37 +52,37 @@ class _ProfileWidgetState extends State<ProfileWidget> {
     if (pickedFile == null) return;
 
     final bytes = await pickedFile.readAsBytes();
-    final user = Supabase.instance.client.auth.currentUser;
+    final user = null;
     if (user == null) return;
 
     try {
       final fileName = '${user.id}_${DateTime.now().millisecondsSinceEpoch}.jpg';
       
       // 1. Subir imagen al bucket 'avatars'
-      await Supabase.instance.client.storage.from('avatars').uploadBinary(
-        fileName,
-        bytes,
-        fileOptions: const FileOptions(contentType: 'image/jpeg'),
-      );
+      // await Supabase.instance.client.storage.from('avatars').uploadBinary(
+      //   fileName,
+      //   bytes,
+      //   fileOptions: const FileOptions(contentType: 'image/jpeg'),
+      // );
 
-      // 2. Obtener URL pública
-      final publicUrl = Supabase.instance.client.storage.from('avatars').getPublicUrl(fileName);
+      // // 2. Obtener URL pública
+      // final publicUrl = Supabase.instance.client.storage.from('avatars').getPublicUrl(fileName);
 
-      // 3. Actualizar usuario
-      await Supabase.instance.client.auth.updateUser(
-        UserAttributes(data: {'avatar_url': publicUrl}),
-      );
+      // // 3. Actualizar usuario
+      // await Supabase.instance.client.auth.updateUser(
+      //   UserAttributes(data: {'avatar_url': publicUrl}),
+      // );
 
-      setState(() => _avatarUrl = publicUrl);
+      // setState(() => _avatarUrl = publicUrl);
       
       if (mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Foto actualizada')));
-    } on StorageException catch (e) {
+    } /*on StorageException catch (e) {
       if (mounted) {
         // Manejo específico para errores de Storage (como bucket no encontrado)
         final message = e.statusCode == '404' ? 'Error: El bucket "avatars" no existe en Supabase.' : 'Error de almacenamiento: ${e.message}';
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(message)));
       }
-    } catch (e) {
+    }*/ catch (e) {
       if (mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Error: $e')));
     }
   }
@@ -192,7 +193,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                   children: [
                                     Expanded(
                                       child: Text(
-                                        Supabase.instance.client.auth.currentUser?.email ?? 'No disponible',
+                                        'Usuario',
                                         style: FlutterFlowTheme.of(context)
                                             .headlineMedium
                                             .override(
@@ -303,7 +304,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                   0.0, 16.0, 0.0, 0.0),
                               child: FFButtonWidget(
                                 onPressed: () async {
-                                  await Supabase.instance.client.auth.signOut();
+                                  await ApiClient.logout();
                                   if (context.mounted) {
                                     context.goNamed('signIn');
                                   }

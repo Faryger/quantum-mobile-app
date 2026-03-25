@@ -1,0 +1,513 @@
+﻿Analyzing app_quantum...
+
+  error - lib\asistencia\asistencia_widget.dart:128:59 - Expected to find ','. - expected_token
+  error - lib\asistencia\asistencia_widget.dart:128:59 - Too many positional arguments: 1 expected, but 5 found. Try removing the extra positional arguments, or specifying the name for named arguments. - extra_positional_arguments_could_be_named
+  error - lib\asistencia\asistencia_widget.dart:128:59 - Undefined name 'user_data_id'. Try correcting the name to one that is defined, or defining the name. - undefined_identifier
+  error - lib\asistencia\asistencia_widget.dart:128:71 - Expected to find ','. - expected_token
+  error - lib\asistencia\asistencia_widget.dart:128:78 - Expected to find ','. - expected_token
+  error - lib\asistencia\asistencia_widget.dart:128:78 - Undefined name 'N'. Try correcting the name to one that is defined, or defining the name. - undefined_identifier
+  error - lib\asistencia\asistencia_widget.dart:128:80 - Undefined name 'A'. Try correcting the name to one that is defined, or defining the name. - undefined_identifier
+  error - lib\asistencia\asistencia_widget.dart:128:81 - Expected to find ','. - expected_token
+  error - lib\asistencia\asistencia_widget.dart:135:74 - Expected to find ','. - expected_token
+  error - lib\asistencia\asistencia_widget.dart:135:74 - Too many positional arguments: 1 expected, but 3 found. Try removing the extra positional arguments, or specifying the name for named arguments. - extra_positional_arguments_could_be_named
+  error - lib\asistencia\asistencia_widget.dart:135:74 - Undefined name 'check_in_time'. Try correcting the name to one that is defined, or defining the name. - undefined_identifier
+  error - lib\asistencia\asistencia_widget.dart:135:87 - Expected to find ','. - expected_token
+  error - lib\asistencia\asistencia_widget.dart:139:73 - Expected to find ','. - expected_token
+  error - lib\asistencia\asistencia_widget.dart:139:73 - Too many positional arguments: 1 expected, but 3 found. Try removing the extra positional arguments, or specifying the name for named arguments. - extra_positional_arguments_could_be_named
+  error - lib\asistencia\asistencia_widget.dart:139:73 - Undefined name 'departure_time'. Try correcting the name to one that is defined, or defining the name. - undefined_identifier
+  error - lib\asistencia\asistencia_widget.dart:139:87 - Expected to find ','. - expected_token
+  error - lib\asistencia\asistencia_widget.dart:143:57 - Expected to find ','. - expected_token
+  error - lib\asistencia\asistencia_widget.dart:143:57 - Too many positional arguments: 1 expected, but 5 found. Try removing the extra positional arguments, or specifying the name for named arguments. - extra_positional_arguments_could_be_named
+  error - lib\asistencia\asistencia_widget.dart:143:57 - Undefined name 'status'. Try correcting the name to one that is defined, or defining the name. - undefined_identifier
+  error - lib\asistencia\asistencia_widget.dart:143:63 - Expected to find ','. - expected_token
+  error - lib\asistencia\asistencia_widget.dart:143:70 - Expected to find ','. - expected_token
+  error - lib\asistencia\asistencia_widget.dart:143:70 - Undefined name 'N'. Try correcting the name to one that is defined, or defining the name. - undefined_identifier
+  error - lib\asistencia\asistencia_widget.dart:143:72 - Undefined name 'A'. Try correcting the name to one that is defined, or defining the name. - undefined_identifier
+  error - lib\asistencia\asistencia_widget.dart:143:73 - Expected to find ','. - expected_token
+  error - lib\views\contract_view.dart:41:54 - Expected to find ','. - expected_token
+  error - lib\views\contract_view.dart:41:54 - Too many positional arguments: 1 expected, but 5 found. Try removing the extra positional arguments, or specifying the name for named arguments. - extra_positional_arguments_could_be_named
+  error - lib\views\contract_view.dart:41:54 - Undefined name 'id'. Try correcting the name to one that is defined, or defining the name. - undefined_identifier
+  error - lib\views\contract_view.dart:41:56 - Expected to find ','. - expected_token
+  error - lib\views\contract_view.dart:41:63 - Expected to find ','. - expected_token
+  error - lib\views\contract_view.dart:41:63 - Undefined name 'N'. Try correcting the name to one that is defined, or defining the name. - undefined_identifier
+  error - lib\views\contract_view.dart:41:65 - Undefined name 'A'. Try correcting the name to one that is defined, or defining the name. - undefined_identifier
+  error - lib\views\contract_view.dart:41:66 - Expected to find ','. - expected_token
+  error - lib\views\contract_view.dart:42:51 - Expected to find ','. - expected_token
+  error - lib\views\contract_view.dart:42:51 - Too many positional arguments: 1 expected, but 5 found. Try removing the extra positional arguments, or specifying the name for named arguments. - extra_positional_arguments_could_be_named
+  error - lib\views\contract_view.dart:42:51 - Undefined name 'value'. Try correcting the name to one that is defined, or defining the name. - undefined_identifier
+  error - lib\views\contract_view.dart:42:56 - Expected to find ','. - expected_token
+  error - lib\views\contract_view.dart:42:79 - Expected to find ','. - expected_token
+  error - lib\views\contract_view.dart:42:79 - Undefined name 'start_date'. Try correcting the name to one that is defined, or defining the name. - undefined_identifier
+  error - lib\views\contract_view.dart:42:89 - Expected to find ','. - expected_token
+  error - lib\views\journey_view.dart:41:53 - Expected to find ','. - expected_token
+  error - lib\views\journey_view.dart:41:53 - Too many positional arguments: 1 expected, but 5 found. Try removing the extra positional arguments, or specifying the name for named arguments. - extra_positional_arguments_could_be_named
+  error - lib\views\journey_view.dart:41:53 - Undefined name 'id'. Try correcting the name to one that is defined, or defining the name. - undefined_identifier
+  error - lib\views\journey_view.dart:41:55 - Expected to find ','. - expected_token
+  error - lib\views\journey_view.dart:41:62 - Expected to find ','. - expected_token
+  error - lib\views\journey_view.dart:41:62 - Undefined name 'N'. Try correcting the name to one that is defined, or defining the name. - undefined_identifier
+  error - lib\views\journey_view.dart:41:64 - Undefined name 'A'. Try correcting the name to one that is defined, or defining the name. - undefined_identifier
+  error - lib\views\journey_view.dart:41:65 - Expected to find ','. - expected_token
+  error - lib\views\journey_view.dart:42:50 - Expected to find ','. - expected_token
+  error - lib\views\journey_view.dart:42:50 - Too many positional arguments: 1 expected, but 3 found. Try removing the extra positional arguments, or specifying the name for named arguments. - extra_positional_arguments_could_be_named
+  error - lib\views\journey_view.dart:42:50 - Undefined name 'journey_type'. Try correcting the name to one that is defined, or defining the name. - undefined_identifier
+  error - lib\views\journey_view.dart:42:62 - Expected to find ','. - expected_token
+  error - lib\views\permission_view.dart:41:53 - Expected to find ','. - expected_token
+  error - lib\views\permission_view.dart:41:53 - Too many positional arguments: 1 expected, but 9 found. Try removing the extra positional arguments, or specifying the name for named arguments. - extra_positional_arguments_could_be_named
+  error - lib\views\permission_view.dart:41:53 - Undefined name 'id'. Try correcting the name to one that is defined, or defining the name. - undefined_identifier
+  error - lib\views\permission_view.dart:41:55 - Expected to find ','. - expected_token
+  error - lib\views\permission_view.dart:41:62 - Expected to find ','. - expected_token
+  error - lib\views\permission_view.dart:41:62 - Undefined name 'N'. Try correcting the name to one that is defined, or defining the name. - undefined_identifier
+  error - lib\views\permission_view.dart:41:64 - Undefined name 'A'. Try correcting the name to one that is defined, or defining the name. - undefined_identifier
+  error - lib\views\permission_view.dart:41:65 - Expected to find ','. - expected_token
+  error - lib\views\permission_view.dart:41:96 - Expected to find ','. - expected_token
+  error - lib\views\permission_view.dart:41:96 - Undefined name 'user_data_id'. Try correcting the name to one that is defined, or defining the name. - undefined_identifier
+  error - lib\views\permission_view.dart:41:108 - Expected to find ','. - expected_token
+  error - lib\views\permission_view.dart:41:115 - Expected to find ','. - expected_token
+  error - lib\views\permission_view.dart:41:115 - Undefined name 'N'. Try correcting the name to one that is defined, or defining the name. - undefined_identifier
+  error - lib\views\permission_view.dart:41:117 - Undefined name 'A'. Try correcting the name to one that is defined, or defining the name. - undefined_identifier
+  error - lib\views\permission_view.dart:41:118 - Expected to find ','. - expected_token
+  error - lib\views\permission_view.dart:42:51 - Expected to find ','. - expected_token
+  error - lib\views\permission_view.dart:42:51 - Too many positional arguments: 1 expected, but 9 found. Try removing the extra positional arguments, or specifying the name for named arguments. - extra_positional_arguments_could_be_named
+  error - lib\views\permission_view.dart:42:51 - Undefined name 'personal_reason'. Try correcting the name to one that is defined, or defining the name. - undefined_identifier
+  error - lib\views\permission_view.dart:42:66 - Expected to find ','. - expected_token
+  error - lib\views\permission_view.dart:42:78 - Expected to find ','. - expected_token
+  error - lib\views\permission_view.dart:42:78 - Undefined name 'family_situation_detail'. Try correcting the name to one that is defined, or defining the name. - undefined_identifier
+  error - lib\views\permission_view.dart:42:101 - Expected to find ','. - expected_token
+  error - lib\views\permission_view.dart:42:123 - Expected to find ','. - expected_token
+  error - lib\views\permission_view.dart:42:123 - Undefined name 'init_date'. Try correcting the name to one that is defined, or defining the name. - undefined_identifier
+  error - lib\views\permission_view.dart:42:132 - Expected to find ','. - expected_token
+  error - lib\views\permission_view.dart:42:147 - Expected to find ','. - expected_token
+  error - lib\views\permission_view.dart:42:147 - Undefined name 'end_date'. Try correcting the name to one that is defined, or defining the name. - undefined_identifier
+  error - lib\views\permission_view.dart:42:155 - Expected to find ','. - expected_token
+  error - lib\views\schedule_view.dart:41:53 - Expected to find ','. - expected_token
+  error - lib\views\schedule_view.dart:41:53 - Too many positional arguments: 1 expected, but 5 found. Try removing the extra positional arguments, or specifying the name for named arguments. - extra_positional_arguments_could_be_named
+  error - lib\views\schedule_view.dart:41:53 - Undefined name 'id'. Try correcting the name to one that is defined, or defining the name. - undefined_identifier
+  error - lib\views\schedule_view.dart:41:55 - Expected to find ','. - expected_token
+  error - lib\views\schedule_view.dart:41:62 - Expected to find ','. - expected_token
+  error - lib\views\schedule_view.dart:41:62 - Undefined name 'N'. Try correcting the name to one that is defined, or defining the name. - undefined_identifier
+  error - lib\views\schedule_view.dart:41:64 - Undefined name 'A'. Try correcting the name to one that is defined, or defining the name. - undefined_identifier
+  error - lib\views\schedule_view.dart:41:65 - Expected to find ','. - expected_token
+  error - lib\views\schedule_view.dart:42:53 - Expected to find ','. - expected_token
+  error - lib\views\schedule_view.dart:42:53 - Too many positional arguments: 1 expected, but 5 found. Try removing the extra positional arguments, or specifying the name for named arguments. - extra_positional_arguments_could_be_named
+  error - lib\views\schedule_view.dart:42:53 - Undefined name 'check_in_time'. Try correcting the name to one that is defined, or defining the name. - undefined_identifier
+  error - lib\views\schedule_view.dart:42:66 - Expected to find ','. - expected_token
+  error - lib\views\schedule_view.dart:42:92 - Expected to find ','. - expected_token
+  error - lib\views\schedule_view.dart:42:92 - Undefined name 'departure_time'. Try correcting the name to one that is defined, or defining the name. - undefined_identifier
+  error - lib\views\schedule_view.dart:42:106 - Expected to find ','. - expected_token
+  error - lib\views\shift_view.dart:41:51 - Expected to find ','. - expected_token
+  error - lib\views\shift_view.dart:41:51 - Too many positional arguments: 1 expected, but 5 found. Try removing the extra positional arguments, or specifying the name for named arguments. - extra_positional_arguments_could_be_named
+  error - lib\views\shift_view.dart:41:51 - Undefined name 'id'. Try correcting the name to one that is defined, or defining the name. - undefined_identifier
+  error - lib\views\shift_view.dart:41:53 - Expected to find ','. - expected_token
+  error - lib\views\shift_view.dart:41:60 - Expected to find ','. - expected_token
+  error - lib\views\shift_view.dart:41:60 - Undefined name 'N'. Try correcting the name to one that is defined, or defining the name. - undefined_identifier
+  error - lib\views\shift_view.dart:41:62 - Undefined name 'A'. Try correcting the name to one that is defined, or defining the name. - undefined_identifier
+  error - lib\views\shift_view.dart:41:63 - Expected to find ','. - expected_token
+  error - lib\views\shift_view.dart:42:50 - Expected to find ','. - expected_token
+  error - lib\views\shift_view.dart:42:50 - Too many positional arguments: 1 expected, but 9 found. Try removing the extra positional arguments, or specifying the name for named arguments. - extra_positional_arguments_could_be_named
+  error - lib\views\shift_view.dart:42:50 - Undefined name 'start_day'. Try correcting the name to one that is defined, or defining the name. - undefined_identifier
+  error - lib\views\shift_view.dart:42:59 - Expected to find ','. - expected_token
+  error - lib\views\shift_view.dart:42:74 - Expected to find ','. - expected_token
+  error - lib\views\shift_view.dart:42:74 - Undefined name 'end_day'. Try correcting the name to one that is defined, or defining the name. - undefined_identifier
+  error - lib\views\shift_view.dart:42:81 - Expected to find ','. - expected_token
+  error - lib\views\shift_view.dart:42:103 - Expected to find ','. - expected_token
+  error - lib\views\shift_view.dart:42:103 - Undefined name 'check_in_time'. Try correcting the name to one that is defined, or defining the name. - undefined_identifier
+  error - lib\views\shift_view.dart:42:116 - Expected to find ','. - expected_token
+  error - lib\views\shift_view.dart:42:131 - Expected to find ','. - expected_token
+  error - lib\views\shift_view.dart:42:131 - Undefined name 'departure_time'. Try correcting the name to one that is defined, or defining the name. - undefined_identifier
+  error - lib\views\shift_view.dart:42:145 - Expected to find ','. - expected_token
+  error - lib\views\support_view.dart:41:53 - Expected to find ','. - expected_token
+  error - lib\views\support_view.dart:41:53 - Too many positional arguments: 1 expected, but 5 found. Try removing the extra positional arguments, or specifying the name for named arguments. - extra_positional_arguments_could_be_named
+  error - lib\views\support_view.dart:41:53 - Undefined name 'id'. Try correcting the name to one that is defined, or defining the name. - undefined_identifier
+  error - lib\views\support_view.dart:41:55 - Expected to find ','. - expected_token
+  error - lib\views\support_view.dart:41:62 - Expected to find ','. - expected_token
+  error - lib\views\support_view.dart:41:62 - Undefined name 'N'. Try correcting the name to one that is defined, or defining the name. - undefined_identifier
+  error - lib\views\support_view.dart:41:64 - Undefined name 'A'. Try correcting the name to one that is defined, or defining the name. - undefined_identifier
+  error - lib\views\support_view.dart:41:65 - Expected to find ','. - expected_token
+  error - lib\views\support_view.dart:42:49 - Expected to find ','. - expected_token
+  error - lib\views\support_view.dart:42:49 - Too many positional arguments: 1 expected, but 5 found. Try removing the extra positional arguments, or specifying the name for named arguments. - extra_positional_arguments_could_be_named
+  error - lib\views\support_view.dart:42:49 - Undefined name 'url'. Try correcting the name to one that is defined, or defining the name. - undefined_identifier
+  error - lib\views\support_view.dart:42:52 - Expected to find ','. - expected_token
+  error - lib\views\support_view.dart:42:59 - Expected to find ','. - expected_token
+  error - lib\views\support_view.dart:42:59 - Undefined name 'N'. Try correcting the name to one that is defined, or defining the name. - undefined_identifier
+  error - lib\views\support_view.dart:42:61 - Undefined name 'A'. Try correcting the name to one that is defined, or defining the name. - undefined_identifier
+  error - lib\views\support_view.dart:42:62 - Expected to find ','. - expected_token
+warning - lib\asistencia\asistencia_widget.dart:39:10 - The declaration '_formatDateTime' isn't referenced. Try removing the declaration of '_formatDateTime'. - unused_element
+warning - lib\asistencia\asistencia_widget.dart:118:27 - The value of the local variable 'asistencia' isn't used. Try removing the variable or using it. - unused_local_variable
+warning - lib\auth\forgot_pass\forgot_pass_model.dart:1:8 - Unused import: '/flutter_flow/flutter_flow_theme.dart'. Try removing the import directive. - unused_import
+warning - lib\auth\forgot_pass\forgot_pass_model.dart:3:8 - Unused import: '/flutter_flow/flutter_flow_widgets.dart'. Try removing the import directive. - unused_import
+warning - lib\auth\forgot_pass\forgot_pass_model.dart:4:8 - Unused import: 'dart:ui'. Try removing the import directive. - unused_import
+warning - lib\auth\forgot_pass\forgot_pass_model.dart:7:8 - Unused import: 'package:google_fonts/google_fonts.dart'. Try removing the import directive. - unused_import
+warning - lib\auth\forgot_pass\forgot_pass_model.dart:8:8 - Unused import: 'package:provider/provider.dart'. Try removing the import directive. - unused_import
+warning - lib\auth\forgot_pass\forgot_pass_widget.dart:3:8 - Unused import: '/flutter_flow/flutter_flow_widgets.dart'. Try removing the import directive. - unused_import
+warning - lib\auth\forgot_pass\forgot_pass_widget.dart:7:8 - Unused import: 'package:provider/provider.dart'. Try removing the import directive. - unused_import
+warning - lib\auth\forgot_pass\forgot_pass_widget.dart:8:8 - Unused import: 'package:supabase_flutter/supabase_flutter.dart'. Try removing the import directive. - unused_import
+warning - lib\auth\forgot_pass_step3\forgot_pass_step3_model.dart:1:8 - Unused import: '/flutter_flow/flutter_flow_theme.dart'. Try removing the import directive. - unused_import
+warning - lib\auth\forgot_pass_step3\forgot_pass_step3_model.dart:3:8 - Unused import: '/flutter_flow/flutter_flow_widgets.dart'. Try removing the import directive. - unused_import
+warning - lib\auth\forgot_pass_step3\forgot_pass_step3_model.dart:4:8 - Unused import: 'dart:ui'. Try removing the import directive. - unused_import
+warning - lib\auth\forgot_pass_step3\forgot_pass_step3_model.dart:7:8 - Unused import: 'package:google_fonts/google_fonts.dart'. Try removing the import directive. - unused_import
+warning - lib\auth\forgot_pass_step3\forgot_pass_step3_model.dart:8:8 - Unused import: 'package:provider/provider.dart'. Try removing the import directive. - unused_import
+warning - lib\auth\forgot_pass_step3\forgot_pass_step3_widget.dart:3:8 - Unused import: '/flutter_flow/flutter_flow_widgets.dart'. Try removing the import directive. - unused_import
+warning - lib\auth\forgot_pass_step3\forgot_pass_step3_widget.dart:7:8 - Unused import: 'package:provider/provider.dart'. Try removing the import directive. - unused_import
+warning - lib\auth\sign_in\sign_in_model.dart:1:8 - Unused import: '/flutter_flow/flutter_flow_theme.dart'. Try removing the import directive. - unused_import
+warning - lib\auth\sign_in\sign_in_model.dart:3:8 - Unused import: '/flutter_flow/flutter_flow_widgets.dart'. Try removing the import directive. - unused_import
+warning - lib\auth\sign_in\sign_in_model.dart:4:8 - Unused import: 'dart:ui'. Try removing the import directive. - unused_import
+warning - lib\auth\sign_in\sign_in_model.dart:7:8 - Unused import: 'package:flutter/gestures.dart'. Try removing the import directive. - unused_import
+warning - lib\auth\sign_in\sign_in_model.dart:9:8 - Unused import: 'package:google_fonts/google_fonts.dart'. Try removing the import directive. - unused_import
+warning - lib\auth\sign_in\sign_in_model.dart:10:8 - Unused import: 'package:provider/provider.dart'. Try removing the import directive. - unused_import
+warning - lib\auth\sign_in\sign_in_widget.dart:3:8 - Unused import: '/flutter_flow/flutter_flow_widgets.dart'. Try removing the import directive. - unused_import
+warning - lib\auth\sign_in\sign_in_widget.dart:6:8 - Unused import: 'package:flutter/gestures.dart'. Try removing the import directive. - unused_import
+warning - lib\auth\sign_in\sign_in_widget.dart:9:8 - Unused import: 'package:flutter_localizations/flutter_localizations.dart'. Try removing the import directive. - unused_import
+warning - lib\auth\sign_in\sign_in_widget.dart:10:8 - Unused import: 'package:flutter_web_plugins/url_strategy.dart'. Try removing the import directive. - unused_import
+warning - lib\auth\sign_in\sign_in_widget.dart:12:8 - Unused import: 'package:provider/provider.dart'. Try removing the import directive. - unused_import
+warning - lib\auth\sign_up\sign_up_model.dart:1:8 - Unused import: '/flutter_flow/flutter_flow_theme.dart'. Try removing the import directive. - unused_import
+warning - lib\auth\sign_up\sign_up_model.dart:3:8 - Unused import: '/flutter_flow/flutter_flow_widgets.dart'. Try removing the import directive. - unused_import
+warning - lib\auth\sign_up\sign_up_model.dart:4:8 - Unused import: 'dart:ui'. Try removing the import directive. - unused_import
+warning - lib\auth\sign_up\sign_up_model.dart:6:8 - Unused import: 'package:flutter/gestures.dart'. Try removing the import directive. - unused_import
+warning - lib\auth\sign_up\sign_up_model.dart:8:8 - Unused import: 'package:google_fonts/google_fonts.dart'. Try removing the import directive. - unused_import
+warning - lib\auth\sign_up\sign_up_model.dart:9:8 - Unused import: 'package:provider/provider.dart'. Try removing the import directive. - unused_import
+warning - lib\auth\sign_up\sign_up_widget.dart:3:8 - Unused import: '/flutter_flow/flutter_flow_widgets.dart'. Try removing the import directive. - unused_import
+warning - lib\auth\sign_up\sign_up_widget.dart:5:8 - Unused import: 'package:flutter/gestures.dart'. Try removing the import directive. - unused_import
+warning - lib\auth\sign_up\sign_up_widget.dart:8:8 - Unused import: 'package:provider/provider.dart'. Try removing the import directive. - unused_import
+warning - lib\components\nav_bar_model.dart:1:8 - Unused import: '/flutter_flow/flutter_flow_theme.dart'. Try removing the import directive. - unused_import
+warning - lib\components\nav_bar_model.dart:3:8 - Unused import: '/flutter_flow/flutter_flow_widgets.dart'. Try removing the import directive. - unused_import
+warning - lib\components\nav_bar_model.dart:4:8 - Unused import: 'dart:ui'. Try removing the import directive. - unused_import
+warning - lib\components\nav_bar_model.dart:5:8 - Unused import: '/index.dart'. Try removing the import directive. - unused_import
+warning - lib\components\nav_bar_model.dart:8:8 - Unused import: 'package:google_fonts/google_fonts.dart'. Try removing the import directive. - unused_import
+warning - lib\components\nav_bar_model.dart:9:8 - Unused import: 'package:provider/provider.dart'. Try removing the import directive. - unused_import
+warning - lib\components\nav_bar_widget.dart:6:8 - Unused import: 'package:google_fonts/google_fonts.dart'. Try removing the import directive. - unused_import
+warning - lib\components\nav_bar_widget.dart:7:8 - Unused import: 'package:provider/provider.dart'. Try removing the import directive. - unused_import
+warning - lib\flutter_flow\flutter_flow_model.dart:5:8 - Unused import: 'flutter_flow_util.dart'. Try removing the import directive. - unused_import
+warning - lib\flutter_flow\flutter_flow_util.dart:16:8 - Unused import: 'lat_lng.dart'. Try removing the import directive. - unused_import
+warning - lib\flutter_flow\nav\nav.dart:8:8 - Unused import: '../../main.dart'. Try removing the import directive. - unused_import
+warning - lib\flutter_flow\nav\nav.dart:9:8 - Unused import: '../flutter_flow_theme.dart'. Try removing the import directive. - unused_import
+warning - lib\flutter_flow\nav\nav.dart:10:8 - Unused import: '../lat_lng.dart'. Try removing the import directive. - unused_import
+warning - lib\flutter_flow\nav\nav.dart:11:8 - Unused import: '../place.dart'. Try removing the import directive. - unused_import
+warning - lib\flutter_flow\nav\serialization_util.dart:73:7 - This default clause is covered by the previous cases. Try removing the default clause, or restructuring the preceding patterns. - unreachable_switch_default
+warning - lib\flutter_flow\nav\serialization_util.dart:199:7 - This default clause is covered by the previous cases. Try removing the default clause, or restructuring the preceding patterns. - unreachable_switch_default
+warning - lib\home\home_page\home_page_model.dart:2:8 - Unused import: '/flutter_flow/flutter_flow_theme.dart'. Try removing the import directive. - unused_import
+warning - lib\home\home_page\home_page_model.dart:4:8 - Unused import: '/flutter_flow/flutter_flow_widgets.dart'. Try removing the import directive. - unused_import
+warning - lib\home\home_page\home_page_model.dart:5:8 - Unused import: 'dart:ui'. Try removing the import directive. - unused_import
+warning - lib\home\home_page\home_page_model.dart:9:8 - Unused import: 'package:google_fonts/google_fonts.dart'. Try removing the import directive. - unused_import
+warning - lib\home\home_page\home_page_model.dart:10:8 - Unused import: 'package:provider/provider.dart'. Try removing the import directive. - unused_import
+warning - lib\home\home_page\home_page_widget.dart:6:8 - Unused import: 'package:carousel_slider/carousel_slider.dart'. Try removing the import directive. - unused_import
+warning - lib\home\home_page\home_page_widget.dart:8:8 - Unused import: 'package:google_fonts/google_fonts.dart'. Try removing the import directive. - unused_import
+warning - lib\home\home_page\home_page_widget.dart:9:8 - Unused import: 'package:provider/provider.dart'. Try removing the import directive. - unused_import
+warning - lib\home\home_page\home_page_widget.dart:10:8 - Unused import: 'package:supabase_flutter/supabase_flutter.dart'. Try removing the import directive. - unused_import
+warning - lib\main.dart:1:8 - Unused import: 'package:flutter/gestures.dart'. Try removing the import directive. - unused_import
+warning - lib\main.dart:6:8 - Unused import: 'flutter_flow/flutter_flow_theme.dart'. Try removing the import directive. - unused_import
+warning - lib\main.dart:9:8 - Unused import: 'index.dart'. Try removing the import directive. - unused_import
+warning - lib\pag\resultado_codigo\resultado_codigo_model.dart:1:8 - Unused import: '/flutter_flow/flutter_flow_icon_button.dart'. Try removing the import directive. - unused_import
+warning - lib\pag\resultado_codigo\resultado_codigo_model.dart:2:8 - Unused import: '/flutter_flow/flutter_flow_theme.dart'. Try removing the import directive. - unused_import
+warning - lib\pag\resultado_codigo\resultado_codigo_model.dart:4:8 - Unused import: '/flutter_flow/flutter_flow_widgets.dart'. Try removing the import directive. - unused_import
+warning - lib\pag\resultado_codigo\resultado_codigo_model.dart:5:8 - Unused import: 'dart:ui'. Try removing the import directive. - unused_import
+warning - lib\pag\resultado_codigo\resultado_codigo_model.dart:9:8 - Unused import: 'package:google_fonts/google_fonts.dart'. Try removing the import directive. - unused_import
+warning - lib\pag\resultado_codigo\resultado_codigo_model.dart:10:8 - Unused import: 'package:provider/provider.dart'. Try removing the import directive. - unused_import
+warning - lib\pag\resultado_codigo\resultado_codigo_widget.dart:5:8 - Unused import: 'package:google_fonts/google_fonts.dart'. Try removing the import directive. - unused_import
+warning - lib\pag\resultado_codigo\resultado_codigo_widget.dart:6:8 - Unused import: 'package:intl/intl.dart'. Try removing the import directive. - unused_import
+warning - lib\permisos\permises_list\permises_list_model.dart:2:8 - Unused import: '/flutter_flow/flutter_flow_theme.dart'. Try removing the import directive. - unused_import
+warning - lib\permisos\permises_list\permises_list_model.dart:4:8 - Unused import: '/flutter_flow/flutter_flow_widgets.dart'. Try removing the import directive. - unused_import
+warning - lib\permisos\permises_list\permises_list_model.dart:5:8 - Unused import: 'dart:ui'. Try removing the import directive. - unused_import
+warning - lib\permisos\permises_list\permises_list_model.dart:8:8 - Unused import: 'package:google_fonts/google_fonts.dart'. Try removing the import directive. - unused_import
+warning - lib\permisos\permises_list\permises_list_model.dart:9:8 - Unused import: 'package:provider/provider.dart'. Try removing the import directive. - unused_import
+warning - lib\permisos\permises_list\permises_list_widget.dart:4:8 - Unused import: '/flutter_flow/flutter_flow_widgets.dart'. Try removing the import directive. - unused_import
+warning - lib\permisos\permises_list\permises_list_widget.dart:8:8 - Unused import: 'package:provider/provider.dart'. Try removing the import directive. - unused_import
+warning - lib\profile\profile\profile_model.dart:2:8 - Unused import: '/flutter_flow/flutter_flow_theme.dart'. Try removing the import directive. - unused_import
+warning - lib\profile\profile\profile_model.dart:4:8 - Unused import: '/flutter_flow/flutter_flow_widgets.dart'. Try removing the import directive. - unused_import
+warning - lib\profile\profile\profile_model.dart:5:8 - Unused import: 'dart:ui'. Try removing the import directive. - unused_import
+warning - lib\profile\profile\profile_model.dart:8:8 - Unused import: 'package:google_fonts/google_fonts.dart'. Try removing the import directive. - unused_import
+warning - lib\profile\profile\profile_model.dart:9:8 - Unused import: 'package:provider/provider.dart'. Try removing the import directive. - unused_import
+warning - lib\profile\profile\profile_widget.dart:10:8 - Unused import: 'package:provider/provider.dart'. Try removing the import directive. - unused_import
+warning - lib\profile\profile\profile_widget.dart:11:8 - Unused import: 'package:supabase_flutter/supabase_flutter.dart'. Try removing the import directive. - unused_import
+warning - lib\profile\profile\profile_widget.dart:54:11 - The value of the local variable 'bytes' isn't used. Try removing the variable or using it. - unused_local_variable
+warning - lib\profile\profile\profile_widget.dart:59:13 - The value of the local variable 'fileName' isn't used. Try removing the variable or using it. - unused_local_variable
+warning - lib\q_r_scanner\camera_scan\camera_scan_model.dart:2:8 - Unused import: '/flutter_flow/flutter_flow_theme.dart'. Try removing the import directive. - unused_import
+warning - lib\q_r_scanner\camera_scan\camera_scan_model.dart:4:8 - Unused import: '/flutter_flow/flutter_flow_widgets.dart'. Try removing the import directive. - unused_import
+warning - lib\q_r_scanner\camera_scan\camera_scan_model.dart:5:8 - Unused import: 'dart:ui'. Try removing the import directive. - unused_import
+warning - lib\q_r_scanner\camera_scan\camera_scan_model.dart:9:8 - Unused import: 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart'. Try removing the import directive. - unused_import
+warning - lib\q_r_scanner\camera_scan\camera_scan_model.dart:10:8 - Unused import: 'package:google_fonts/google_fonts.dart'. Try removing the import directive. - unused_import
+warning - lib\q_r_scanner\camera_scan\camera_scan_model.dart:11:8 - Unused import: 'package:provider/provider.dart'. Try removing the import directive. - unused_import
+warning - lib\q_r_scanner\camera_scan\camera_scan_widget.dart:11:8 - Unused import: 'package:provider/provider.dart'. Try removing the import directive. - unused_import
+warning - lib\q_r_scanner\camera_scan\camera_scan_widget.dart:126:48 - The operand can't be 'null', so the condition is always 'true'. Remove the condition. - unnecessary_null_comparison
+warning - lib\q_r_scanner\camera_scan\camera_scan_widget.dart:131:64 - The '!' will have no effect because the receiver can't be null. Try removing the '!' operator. - unnecessary_non_null_assertion
+warning - lib\views\contract_view.dart:37:21 - The value of the local variable 'item' isn't used. Try removing the variable or using it. - unused_local_variable
+warning - lib\views\journey_view.dart:37:21 - The value of the local variable 'item' isn't used. Try removing the variable or using it. - unused_local_variable
+warning - lib\views\permission_view.dart:37:21 - The value of the local variable 'item' isn't used. Try removing the variable or using it. - unused_local_variable
+warning - lib\views\schedule_view.dart:37:21 - The value of the local variable 'item' isn't used. Try removing the variable or using it. - unused_local_variable
+warning - lib\views\shift_view.dart:37:21 - The value of the local variable 'item' isn't used. Try removing the variable or using it. - unused_local_variable
+warning - lib\views\support_view.dart:37:21 - The value of the local variable 'item' isn't used. Try removing the variable or using it. - unused_local_variable
+   info - lib\asistencia\asistencia_widget.dart:88:26 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\asistencia\asistencia_widget.dart:88:40 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\asistencia\asistencia_widget.dart:160:18 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\forgot_pass\forgot_pass_widget.dart:4:8 - The import of 'dart:ui' is unnecessary because all of the used elements are also provided by the import of 'package:flutter/material.dart'. Try removing the import directive. - unnecessary_import
+   info - lib\auth\forgot_pass\forgot_pass_widget.dart:78:32 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\forgot_pass\forgot_pass_widget.dart:89:20 - Use 'const' literals as arguments to constructors of '@immutable' classes. Try adding 'const' before the literal. - prefer_const_literals_to_create_immutables
+   info - lib\auth\forgot_pass\forgot_pass_widget.dart:96:22 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\forgot_pass\forgot_pass_widget.dart:124:27 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\forgot_pass\forgot_pass_widget.dart:145:27 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\forgot_pass\forgot_pass_widget.dart:146:30 - Use a 'SizedBox' to add whitespace to a layout. Try using a 'SizedBox' rather than a 'Container'. - sized_box_for_whitespace
+   info - lib\auth\forgot_pass\forgot_pass_widget.dart:226:45 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\forgot_pass\forgot_pass_widget.dart:252:32 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\forgot_pass\forgot_pass_widget.dart:255:28 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\forgot_pass\forgot_pass_widget.dart:261:27 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\forgot_pass\forgot_pass_widget.dart:261:45 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\forgot_pass\forgot_pass_widget.dart:266:68 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\forgot_pass\forgot_pass_widget.dart:266:86 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\forgot_pass\forgot_pass_widget.dart:269:29 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\forgot_pass\forgot_pass_widget.dart:269:47 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\forgot_pass\forgot_pass_widget.dart:275:29 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\forgot_pass\forgot_pass_widget.dart:275:47 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\forgot_pass\forgot_pass_widget.dart:287:29 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\forgot_pass\forgot_pass_widget.dart:289:34 - Use 'const' literals as arguments to constructors of '@immutable' classes. Try adding 'const' before the literal. - prefer_const_literals_to_create_immutables
+   info - lib\auth\forgot_pass\forgot_pass_widget.dart:290:34 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\forgot_pass\forgot_pass_widget.dart:291:32 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\forgot_pass\forgot_pass_widget.dart:296:36 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\forgot_pass_step3\forgot_pass_step3_widget.dart:4:8 - The import of 'dart:ui' is unnecessary because all of the used elements are also provided by the import of 'package:flutter/material.dart'. Try removing the import directive. - unnecessary_import
+   info - lib\auth\forgot_pass_step3\forgot_pass_step3_widget.dart:80:32 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\forgot_pass_step3\forgot_pass_step3_widget.dart:91:20 - Use 'const' literals as arguments to constructors of '@immutable' classes. Try adding 'const' before the literal. - prefer_const_literals_to_create_immutables
+   info - lib\auth\forgot_pass_step3\forgot_pass_step3_widget.dart:98:22 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\forgot_pass_step3\forgot_pass_step3_widget.dart:126:27 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\forgot_pass_step3\forgot_pass_step3_widget.dart:127:30 - Use a 'SizedBox' to add whitespace to a layout. Try using a 'SizedBox' rather than a 'Container'. - sized_box_for_whitespace
+   info - lib\auth\forgot_pass_step3\forgot_pass_step3_widget.dart:207:45 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\forgot_pass_step3\forgot_pass_step3_widget.dart:235:27 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\forgot_pass_step3\forgot_pass_step3_widget.dart:236:30 - Use a 'SizedBox' to add whitespace to a layout. Try using a 'SizedBox' rather than a 'Container'. - sized_box_for_whitespace
+   info - lib\auth\forgot_pass_step3\forgot_pass_step3_widget.dart:316:45 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\forgot_pass_step3\forgot_pass_step3_widget.dart:342:32 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\forgot_pass_step3\forgot_pass_step3_widget.dart:345:28 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\forgot_pass_step3\forgot_pass_step3_widget.dart:353:27 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\forgot_pass_step3\forgot_pass_step3_widget.dart:355:32 - Use 'const' literals as arguments to constructors of '@immutable' classes. Try adding 'const' before the literal. - prefer_const_literals_to_create_immutables
+   info - lib\auth\forgot_pass_step3\forgot_pass_step3_widget.dart:356:32 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\forgot_pass_step3\forgot_pass_step3_widget.dart:357:30 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\forgot_pass_step3\forgot_pass_step3_widget.dart:362:34 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\sign_in\sign_in_widget.dart:4:8 - The import of 'dart:ui' is unnecessary because all of the used elements are also provided by the import of 'package:flutter/material.dart'. Try removing the import directive. - unnecessary_import
+   info - lib\auth\sign_in\sign_in_widget.dart:64:20 - Use 'const' literals as arguments to constructors of '@immutable' classes. Try adding 'const' before the literal. - prefer_const_literals_to_create_immutables
+   info - lib\auth\sign_in\sign_in_widget.dart:71:22 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\sign_in\sign_in_widget.dart:99:27 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\sign_in\sign_in_widget.dart:100:30 - Use a 'SizedBox' to add whitespace to a layout. Try using a 'SizedBox' rather than a 'Container'. - sized_box_for_whitespace
+   info - lib\auth\sign_in\sign_in_widget.dart:180:45 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\sign_in\sign_in_widget.dart:208:27 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\sign_in\sign_in_widget.dart:209:30 - Use a 'SizedBox' to add whitespace to a layout. Try using a 'SizedBox' rather than a 'Container'. - sized_box_for_whitespace
+   info - lib\auth\sign_in\sign_in_widget.dart:289:45 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\sign_in\sign_in_widget.dart:316:34 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\sign_in\sign_in_widget.dart:319:29 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\sign_in\sign_in_widget.dart:353:28 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\sign_in\sign_in_widget.dart:368:31 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\sign_in\sign_in_widget.dart:368:49 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\sign_in\sign_in_widget.dart:375:29 - Don't use 'BuildContext's across async gaps. Try rewriting the code to not use the 'BuildContext', or guard the use with a 'mounted' check. - use_build_context_synchronously
+   info - lib\auth\sign_in\sign_in_widget.dart:377:50 - Don't use 'BuildContext's across async gaps. Try rewriting the code to not use the 'BuildContext', or guard the use with a 'mounted' check. - use_build_context_synchronously
+   info - lib\auth\sign_in\sign_in_widget.dart:378:31 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\sign_in\sign_in_widget.dart:378:49 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\sign_in\sign_in_widget.dart:389:33 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\sign_in\sign_in_widget.dart:391:38 - Use 'const' literals as arguments to constructors of '@immutable' classes. Try adding 'const' before the literal. - prefer_const_literals_to_create_immutables
+   info - lib\auth\sign_in\sign_in_widget.dart:392:38 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\sign_in\sign_in_widget.dart:393:36 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\sign_in\sign_in_widget.dart:398:40 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\sign_in\sign_in_widget.dart:423:29 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\sign_up\sign_up_widget.dart:4:8 - The import of 'dart:ui' is unnecessary because all of the used elements are also provided by the import of 'package:flutter/material.dart'. Try removing the import directive. - unnecessary_import
+   info - lib\auth\sign_up\sign_up_widget.dart:88:32 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\sign_up\sign_up_widget.dart:99:20 - Use 'const' literals as arguments to constructors of '@immutable' classes. Try adding 'const' before the literal. - prefer_const_literals_to_create_immutables
+   info - lib\auth\sign_up\sign_up_widget.dart:106:22 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\sign_up\sign_up_widget.dart:134:27 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\sign_up\sign_up_widget.dart:135:30 - Use a 'SizedBox' to add whitespace to a layout. Try using a 'SizedBox' rather than a 'Container'. - sized_box_for_whitespace
+   info - lib\auth\sign_up\sign_up_widget.dart:215:45 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\sign_up\sign_up_widget.dart:243:27 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\sign_up\sign_up_widget.dart:244:30 - Use a 'SizedBox' to add whitespace to a layout. Try using a 'SizedBox' rather than a 'Container'. - sized_box_for_whitespace
+   info - lib\auth\sign_up\sign_up_widget.dart:324:45 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\sign_up\sign_up_widget.dart:352:27 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\sign_up\sign_up_widget.dart:353:30 - Use a 'SizedBox' to add whitespace to a layout. Try using a 'SizedBox' rather than a 'Container'. - sized_box_for_whitespace
+   info - lib\auth\sign_up\sign_up_widget.dart:433:45 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\sign_up\sign_up_widget.dart:461:27 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\sign_up\sign_up_widget.dart:462:30 - Use a 'SizedBox' to add whitespace to a layout. Try using a 'SizedBox' rather than a 'Container'. - sized_box_for_whitespace
+   info - lib\auth\sign_up\sign_up_widget.dart:542:45 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\sign_up\sign_up_widget.dart:568:32 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\sign_up\sign_up_widget.dart:571:28 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\sign_up\sign_up_widget.dart:583:31 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\sign_up\sign_up_widget.dart:583:49 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\sign_up\sign_up_widget.dart:590:31 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\sign_up\sign_up_widget.dart:590:49 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\sign_up\sign_up_widget.dart:596:72 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\sign_up\sign_up_widget.dart:596:90 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\sign_up\sign_up_widget.dart:606:33 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\sign_up\sign_up_widget.dart:606:51 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\sign_up\sign_up_widget.dart:618:33 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\sign_up\sign_up_widget.dart:620:38 - Use 'const' literals as arguments to constructors of '@immutable' classes. Try adding 'const' before the literal. - prefer_const_literals_to_create_immutables
+   info - lib\auth\sign_up\sign_up_widget.dart:621:38 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\sign_up\sign_up_widget.dart:622:36 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\sign_up\sign_up_widget.dart:627:40 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\auth\sign_up\sign_up_widget.dart:652:29 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\backend\api_client.dart:2:8 - The imported package 'http' isn't a dependency of the importing package. Try adding a dependency for 'http' in the 'pubspec.yaml' file. - depend_on_referenced_packages
+   info - lib\components\nav_bar_widget.dart:3:8 - The import of 'dart:ui' is unnecessary because all of the used elements are also provided by the import of 'package:flutter/material.dart'. Try removing the import directive. - unnecessary_import
+   info - lib\components\nav_bar_widget.dart:55:16 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\components\nav_bar_widget.dart:63:20 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\components\nav_bar_widget.dart:77:43 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\components\nav_bar_widget.dart:80:35 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\components\nav_bar_widget.dart:88:31 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\components\nav_bar_widget.dart:92:32 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\components\nav_bar_widget.dart:110:43 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\components\nav_bar_widget.dart:113:35 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\components\nav_bar_widget.dart:121:31 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\components\nav_bar_widget.dart:125:32 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\components\nav_bar_widget.dart:143:43 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\components\nav_bar_widget.dart:146:35 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\components\nav_bar_widget.dart:154:31 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\components\nav_bar_widget.dart:158:32 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\components\nav_bar_widget.dart:176:43 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\components\nav_bar_widget.dart:179:35 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\components\nav_bar_widget.dart:187:31 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\components\nav_bar_widget.dart:191:32 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\components\nav_bar_widget.dart:209:43 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\components\nav_bar_widget.dart:212:35 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\components\nav_bar_widget.dart:220:31 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\components\nav_bar_widget.dart:224:32 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\flutter_flow\flutter_flow_icon_button.dart:5:9 - Parameter 'key' could be a super parameter. Trying converting 'key' to a super parameter. - use_super_parameters
+   info - lib\flutter_flow\flutter_flow_icon_button.dart:86:14 - 'MaterialStateProperty' is deprecated and shouldn't be used. Use WidgetStateProperty instead. Moved to the Widgets layer to make code available outside of Material. This feature was deprecated after v3.19.0-0.3.pre. Try replacing the use of the deprecated member with the replacement. - deprecated_member_use
+   info - lib\flutter_flow\flutter_flow_icon_button.dart:88:31 - 'MaterialState' is deprecated and shouldn't be used. Use WidgetState instead. Moved to the Widgets layer to make code available outside of Material. This feature was deprecated after v3.19.0-0.3.pre. Try replacing the use of the deprecated member with the replacement. - deprecated_member_use
+   info - lib\flutter_flow\flutter_flow_icon_button.dart:116:18 - 'MaterialStateProperty' is deprecated and shouldn't be used. Use WidgetStateProperty instead. Moved to the Widgets layer to make code available outside of Material. This feature was deprecated after v3.19.0-0.3.pre. Try replacing the use of the deprecated member with the replacement. - deprecated_member_use
+   info - lib\flutter_flow\flutter_flow_icon_button.dart:118:31 - 'MaterialState' is deprecated and shouldn't be used. Use WidgetState instead. Moved to the Widgets layer to make code available outside of Material. This feature was deprecated after v3.19.0-0.3.pre. Try replacing the use of the deprecated member with the replacement. - deprecated_member_use
+   info - lib\flutter_flow\flutter_flow_icon_button.dart:122:31 - 'MaterialState' is deprecated and shouldn't be used. Use WidgetState instead. Moved to the Widgets layer to make code available outside of Material. This feature was deprecated after v3.19.0-0.3.pre. Try replacing the use of the deprecated member with the replacement. - deprecated_member_use
+   info - lib\flutter_flow\flutter_flow_icon_button.dart:129:24 - 'MaterialStateProperty' is deprecated and shouldn't be used. Use WidgetStateProperty instead. Moved to the Widgets layer to make code available outside of Material. This feature was deprecated after v3.19.0-0.3.pre. Try replacing the use of the deprecated member with the replacement. - deprecated_member_use
+   info - lib\flutter_flow\flutter_flow_icon_button.dart:131:31 - 'MaterialState' is deprecated and shouldn't be used. Use WidgetState instead. Moved to the Widgets layer to make code available outside of Material. This feature was deprecated after v3.19.0-0.3.pre. Try replacing the use of the deprecated member with the replacement. - deprecated_member_use
+   info - lib\flutter_flow\flutter_flow_icon_button.dart:135:31 - 'MaterialState' is deprecated and shouldn't be used. Use WidgetState instead. Moved to the Widgets layer to make code available outside of Material. This feature was deprecated after v3.19.0-0.3.pre. Try replacing the use of the deprecated member with the replacement. - deprecated_member_use
+   info - lib\flutter_flow\flutter_flow_icon_button.dart:143:21 - 'MaterialStateProperty' is deprecated and shouldn't be used. Use WidgetStateProperty instead. Moved to the Widgets layer to make code available outside of Material. This feature was deprecated after v3.19.0-0.3.pre. Try replacing the use of the deprecated member with the replacement. - deprecated_member_use
+   info - lib\flutter_flow\flutter_flow_icon_button.dart:144:29 - 'MaterialState' is deprecated and shouldn't be used. Use WidgetState instead. Moved to the Widgets layer to make code available outside of Material. This feature was deprecated after v3.19.0-0.3.pre. Try replacing the use of the deprecated member with the replacement. - deprecated_member_use
+   info - lib\flutter_flow\flutter_flow_icon_button.dart:163:19 - Use a 'SizedBox' to add whitespace to a layout. Try using a 'SizedBox' rather than a 'Container'. - sized_box_for_whitespace
+   info - lib\flutter_flow\flutter_flow_model.dart:57:10 - Unnecessary use of getter and setter to wrap a field. Try removing the getter and setter and renaming the field. - unnecessary_getters_setters
+   info - lib\flutter_flow\flutter_flow_model.dart:58:3 - Unnecessary return type on a setter. Try removing the return type. - avoid_return_types_on_setters
+   info - lib\flutter_flow\flutter_flow_model.dart:138:44 - Function literals shouldn't be passed to 'forEach'. Try using a 'for' loop. - avoid_function_literals_in_foreach_calls
+   info - lib\flutter_flow\flutter_flow_model.dart:165:10 - Use 'TypeName _' instead of a type literal. Replace with 'TypeName _'. - type_literal_in_constant_pattern
+   info - lib\flutter_flow\flutter_flow_model.dart:167:10 - Use 'TypeName _' instead of a type literal. Replace with 'TypeName _'. - type_literal_in_constant_pattern
+   info - lib\flutter_flow\flutter_flow_model.dart:169:10 - Use 'TypeName _' instead of a type literal. Replace with 'TypeName _'. - type_literal_in_constant_pattern
+   info - lib\flutter_flow\flutter_flow_model.dart:171:10 - Use 'TypeName _' instead of a type literal. Replace with 'TypeName _'. - type_literal_in_constant_pattern
+   info - lib\flutter_flow\flutter_flow_util.dart:164:10 - Use 'TypeName _' instead of a type literal. Replace with 'TypeName _'. - type_literal_in_constant_pattern
+   info - lib\flutter_flow\flutter_flow_util.dart:167:10 - Use 'TypeName _' instead of a type literal. Replace with 'TypeName _'. - type_literal_in_constant_pattern
+   info - lib\flutter_flow\flutter_flow_util.dart:284:24 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\flutter_flow\flutter_flow_util.dart:285:22 - Use a 'SizedBox' to add whitespace to a layout. Try using a 'SizedBox' rather than a 'Container'. - sized_box_for_whitespace
+   info - lib\flutter_flow\nav\nav.dart:4:8 - The import of 'package:go_router/go_router.dart' is unnecessary because all of the used elements are also provided by the import of '../flutter_flow_util.dart'. Try removing the import directive. - unnecessary_import
+   info - lib\flutter_flow\nav\nav.dart:5:8 - The import of 'package:page_transition/page_transition.dart' is unnecessary because all of the used elements are also provided by the import of '../flutter_flow_util.dart'. Try removing the import directive. - unnecessary_import
+   info - lib\flutter_flow\nav\nav.dart:13:8 - The import of 'serialization_util.dart' is unnecessary because all of the used elements are also provided by the import of '../flutter_flow_util.dart'. Try removing the import directive. - unnecessary_import
+   info - lib\flutter_flow\nav\nav.dart:43:41 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\flutter_flow\nav\nav.dart:48:36 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\flutter_flow\nav\nav.dart:53:41 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\flutter_flow\nav\nav.dart:58:41 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\flutter_flow\nav\nav.dart:63:41 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\flutter_flow\nav\nav.dart:68:41 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\flutter_flow\nav\nav.dart:73:41 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\flutter_flow\nav\nav.dart:78:41 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\flutter_flow\nav\nav.dart:83:41 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\flutter_flow\nav\nav.dart:88:41 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\flutter_flow\nav\nav.dart:93:41 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\flutter_flow\nav\nav.dart:267:41 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\flutter_flow\nav\serialization_util.dart:78:5 - Don't invoke 'print' in production code. Try using a logging framework. - avoid_print
+   info - lib\flutter_flow\nav\serialization_util.dart:139:3 - The constant name 'String' isn't a lowerCamelCase identifier. Try changing the name to follow the lowerCamelCase style. - constant_identifier_names
+   info - lib\flutter_flow\nav\serialization_util.dart:141:3 - The constant name 'DateTime' isn't a lowerCamelCase identifier. Try changing the name to follow the lowerCamelCase style. - constant_identifier_names
+   info - lib\flutter_flow\nav\serialization_util.dart:142:3 - The constant name 'DateTimeRange' isn't a lowerCamelCase identifier. Try changing the name to follow the lowerCamelCase style. - constant_identifier_names
+   info - lib\flutter_flow\nav\serialization_util.dart:143:3 - The constant name 'LatLng' isn't a lowerCamelCase identifier. Try changing the name to follow the lowerCamelCase style. - constant_identifier_names
+   info - lib\flutter_flow\nav\serialization_util.dart:144:3 - The constant name 'Color' isn't a lowerCamelCase identifier. Try changing the name to follow the lowerCamelCase style. - constant_identifier_names
+   info - lib\flutter_flow\nav\serialization_util.dart:145:3 - The constant name 'FFPlace' isn't a lowerCamelCase identifier. Try changing the name to follow the lowerCamelCase style. - constant_identifier_names
+   info - lib\flutter_flow\nav\serialization_util.dart:146:3 - The constant name 'FFUploadedFile' isn't a lowerCamelCase identifier. Try changing the name to follow the lowerCamelCase style. - constant_identifier_names
+   info - lib\flutter_flow\nav\serialization_util.dart:147:3 - The constant name 'JSON' isn't a lowerCamelCase identifier. Try changing the name to follow the lowerCamelCase style. - constant_identifier_names
+   info - lib\flutter_flow\nav\serialization_util.dart:165:12 - Use 'whereType' to select elements of a given type. Try rewriting the expression to use 'whereType'. - prefer_iterable_wheretype
+   info - lib\flutter_flow\nav\serialization_util.dart:203:5 - Don't invoke 'print' in production code. Try using a logging framework. - avoid_print
+   info - lib\home\home_page\home_page_widget.dart:5:8 - The import of 'dart:ui' is unnecessary because all of the used elements are also provided by the import of 'package:flutter/material.dart'. Try removing the import directive. - unnecessary_import
+   info - lib\home\home_page\home_page_widget.dart:81:28 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\home\home_page\home_page_widget.dart:94:32 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\home\home_page\home_page_widget.dart:123:29 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\home\home_page\home_page_widget.dart:136:29 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\home\home_page\home_page_widget.dart:137:32 - Use a 'SizedBox' to add whitespace to a layout. Try using a 'SizedBox' rather than a 'Container'. - sized_box_for_whitespace
+   info - lib\home\home_page\home_page_widget.dart:145:42 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\home\home_page\home_page_widget.dart:156:46 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\home\home_page\home_page_widget.dart:170:47 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\home\home_page\home_page_widget.dart:188:42 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\home\home_page\home_page_widget.dart:199:46 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\home\home_page\home_page_widget.dart:213:47 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\home\home_page\home_page_widget.dart:231:42 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\home\home_page\home_page_widget.dart:242:46 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\home\home_page\home_page_widget.dart:256:47 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\home\home_page\home_page_widget.dart:278:34 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\home\home_page\home_page_widget.dart:291:34 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\home\home_page\home_page_widget.dart:301:38 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\home\home_page\home_page_widget.dart:326:50 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\home\home_page\home_page_widget.dart:334:56 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\home\home_page\home_page_widget.dart:348:41 - Don't invoke 'print' in production code. Try using a logging framework. - avoid_print
+   info - lib\home\home_page\home_page_widget.dart:353:50 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\home\home_page\home_page_widget.dart:356:45 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\home\home_page\home_page_widget.dart:370:53 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\home\home_page\home_page_widget.dart:387:29 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\home\home_page\home_page_widget.dart:399:34 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\home\home_page\home_page_widget.dart:441:34 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\home\home_page\home_page_widget.dart:492:18 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\main.dart:8:8 - The import of 'flutter_flow/nav/nav.dart' is unnecessary because all of the used elements are also provided by the import of 'flutter_flow/flutter_flow_util.dart'. Try removing the import directive. - unnecessary_import
+   info - lib\main.dart:19:7 - Constructors for public widgets should have a named 'key' parameter. Try adding a named parameter to the constructor. - use_key_in_widget_constructors
+   info - lib\main.dart:24:10 - Invalid use of a private type in a public API. Try making the private type public, or making the API that uses the private type also be private. - library_private_types_in_public_api
+   info - lib\main.dart:63:31 - Use 'const' literals as arguments to constructors of '@immutable' classes. Try adding 'const' before the literal. - prefer_const_literals_to_create_immutables
+   info - lib\pag\resultado_codigo\resultado_codigo_widget.dart:43:26 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\pag\resultado_codigo\resultado_codigo_widget.dart:67:26 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\pag\resultado_codigo\resultado_codigo_widget.dart:74:15 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\pag\resultado_codigo\resultado_codigo_widget.dart:84:32 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\permisos\permises_list\permises_list_widget.dart:5:8 - The import of 'dart:ui' is unnecessary because all of the used elements are also provided by the import of 'package:flutter/material.dart'. Try removing the import directive. - unnecessary_import
+   info - lib\permisos\permises_list\permises_list_widget.dart:70:20 - Use 'const' literals as arguments to constructors of '@immutable' classes. Try adding 'const' before the literal. - prefer_const_literals_to_create_immutables
+   info - lib\permisos\permises_list\permises_list_widget.dart:92:42 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\permisos\permises_list\permises_list_widget.dart:119:45 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\permisos\permises_list\permises_list_widget.dart:127:54 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\permisos\permises_list\permises_list_widget.dart:237:56 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\permisos\permises_list\permises_list_widget.dart:247:41 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\permisos\permises_list\permises_list_widget.dart:248:45 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\permisos\permises_list\permises_list_widget.dart:249:43 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\permisos\permises_list\permises_list_widget.dart:253:36 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\permisos\permises_list\permises_list_widget.dart:285:45 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\permisos\permises_list\permises_list_widget.dart:293:54 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\permisos\permises_list\permises_list_widget.dart:403:56 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\permisos\permises_list\permises_list_widget.dart:412:43 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\permisos\permises_list\permises_list_widget.dart:413:47 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\permisos\permises_list\permises_list_widget.dart:414:45 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\permisos\permises_list\permises_list_widget.dart:425:26 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\profile\profile\profile_widget.dart:5:8 - The import of 'dart:ui' is unnecessary because all of the used elements are also provided by the import of 'package:flutter/material.dart'. Try removing the import directive. - unnecessary_import
+   info - lib\profile\profile\profile_widget.dart:55:5 - Use 'const' for final variables initialized to a constant value. Try replacing 'final' with 'const'. - prefer_const_declarations
+   info - lib\profile\profile\profile_widget.dart:78:63 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\profile\profile\profile_widget.dart:78:81 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\profile\profile\profile_widget.dart:119:20 - Use 'const' literals as arguments to constructors of '@immutable' classes. Try adding 'const' before the literal. - prefer_const_literals_to_create_immutables
+   info - lib\profile\profile\profile_widget.dart:128:26 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\profile\profile\profile_widget.dart:135:36 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\profile\profile\profile_widget.dart:142:41 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\profile\profile\profile_widget.dart:154:29 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\profile\profile\profile_widget.dart:178:29 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\profile\profile\profile_widget.dart:187:38 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\profile\profile\profile_widget.dart:218:44 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\profile\profile\profile_widget.dart:220:40 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\profile\profile\profile_widget.dart:227:29 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\profile\profile\profile_widget.dart:251:29 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\profile\profile\profile_widget.dart:260:38 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\profile\profile\profile_widget.dart:291:44 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\profile\profile\profile_widget.dart:293:40 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\profile\profile\profile_widget.dart:303:40 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\profile\profile\profile_widget.dart:316:44 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\profile\profile\profile_widget.dart:318:48 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\profile\profile\profile_widget.dart:353:37 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\profile\profile\profile_widget.dart:354:35 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\profile\profile\profile_widget.dart:362:22 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\q_r_scanner\camera_scan\camera_scan_widget.dart:10:8 - The import of 'package:intl/intl.dart' is unnecessary because all of the used elements are also provided by the import of '/flutter_flow/flutter_flow_util.dart'. Try removing the import directive. - unnecessary_import
+   info - lib\q_r_scanner\camera_scan\camera_scan_widget.dart:37:29 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\q_r_scanner\camera_scan\camera_scan_widget.dart:70:26 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\q_r_scanner\camera_scan\camera_scan_widget.dart:75:22 - Use a 'SizedBox' to add whitespace to a layout. Try using a 'SizedBox' rather than a 'Container'. - sized_box_for_whitespace
+   info - lib\q_r_scanner\camera_scan\camera_scan_widget.dart:91:32 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\q_r_scanner\camera_scan\camera_scan_widget.dart:103:32 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\q_r_scanner\camera_scan\camera_scan_widget.dart:115:32 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\q_r_scanner\camera_scan\camera_scan_widget.dart:128:29 - Don't use 'BuildContext's across async gaps. Try rewriting the code to not use the 'BuildContext', or guard the use with a 'mounted' check. - use_build_context_synchronously
+   info - lib\q_r_scanner\camera_scan\camera_scan_widget.dart:138:31 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\q_r_scanner\camera_scan\camera_scan_widget.dart:145:36 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\q_r_scanner\camera_scan\camera_scan_widget.dart:146:40 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\q_r_scanner\camera_scan\camera_scan_widget.dart:157:39 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\q_r_scanner\camera_scan\camera_scan_widget.dart:172:22 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\views\contract_view.dart:30:41 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\views\contract_view.dart:30:55 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\views\journey_view.dart:30:41 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\views\journey_view.dart:30:55 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\views\permission_view.dart:30:41 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\views\permission_view.dart:30:55 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\views\schedule_view.dart:30:41 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\views\schedule_view.dart:30:55 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\views\shift_view.dart:30:41 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\views\shift_view.dart:30:55 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\views\support_view.dart:30:41 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+   info - lib\views\support_view.dart:30:55 - Use 'const' with the constructor to improve performance. Try adding the 'const' keyword to the constructor invocation. - prefer_const_constructors
+
+509 issues found.

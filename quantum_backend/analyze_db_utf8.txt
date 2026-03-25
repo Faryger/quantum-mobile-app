@@ -1,0 +1,8 @@
+﻿Analyzing db.dart...
+
+  error - db.dart:4:10 - Undefined class 'ConnectionPool'. Try changing the name to the name of an existing class, or creating a class with the name 'ConnectionPool'. - undefined_class
+  error - db.dart:12:7 - The named parameter 'maxConnections' isn't defined. Try correcting the name to an existing named parameter's name, or defining a named parameter with the name 'maxConnections'. - undefined_named_parameter
+  error - db.dart:15:13 - The method 'ConnectionPool' isn't defined for the type 'Database'. Try correcting the name to the name of an existing method, or defining a method named 'ConnectionPool'. - undefined_method
+  error - db.dart:19:10 - Undefined class 'ConnectionPool'. Try changing the name to the name of an existing class, or creating a class with the name 'ConnectionPool'. - undefined_class
+
+4 issues found.

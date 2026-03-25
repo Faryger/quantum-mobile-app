@@ -5,9 +5,12 @@ import 'dart:ui';
 import '/index.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_web_plugins/url_strategy.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
+import '../../backend/api_client.dart';
 import 'sign_in_model.dart';
 export 'sign_in_model.dart';
 
@@ -368,18 +371,11 @@ class _SignInWidgetState extends State<SignInWidget> {
                           }
 
                           try {
-                            await Supabase.instance.client.auth.signInWithPassword(
-                              email: email,
-                              password: password,
-                            );
+                            await ApiClient.login(email, password);
                             context.goNamed(HomePageWidget.routeName);
-                          } on AuthException catch (e) {
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              SnackBar(content: Text(e.message)),
-                            );
                           } catch (e) {
                             ScaffoldMessenger.of(context).showSnackBar(
-                              SnackBar(content: Text('Error inesperado al iniciar sesión')),
+                              SnackBar(content: Text('Error al iniciar sesión: ' + e.toString())),
                             );
                           }
                         },

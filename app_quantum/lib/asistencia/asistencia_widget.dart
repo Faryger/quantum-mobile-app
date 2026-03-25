@@ -1,9 +1,9 @@
-import '/backend/supabase/database/tables/asistencia.dart';
 import '/components/nav_bar_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../../backend/api_client.dart';
 import 'asistencia_model.dart';
 export 'asistencia_model.dart';
 
@@ -19,7 +19,7 @@ class AsistenciaWidget extends StatefulWidget {
 
 class _AsistenciaWidgetState extends State<AsistenciaWidget> {
   late AsistenciaModel _model;
-  late Future<List<AsistenciaRow>> _asistenciaFuture;
+  late Future<List<dynamic>> _asistenciaFuture;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -27,9 +27,7 @@ class _AsistenciaWidgetState extends State<AsistenciaWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => AsistenciaModel());
-    _asistenciaFuture = AsistenciaTable().queryRows(
-      queryFn: (q) => q.order('entry_time', ascending: false),
-    );
+    _asistenciaFuture = ApiClient.getAttendance();
   }
 
   @override
@@ -38,11 +36,14 @@ class _AsistenciaWidgetState extends State<AsistenciaWidget> {
     super.dispose();
   }
 
-  String _formatDateTime(DateTime? dateTime) {
-    if (dateTime == null) {
-      return 'N/A';
+  String _formatDateTime(String? dateTimeStr) {
+    if (dateTimeStr == null || dateTimeStr.isEmpty) return 'N/A';
+    try {
+      final dateTime = DateTime.parse(dateTimeStr);
+      return DateFormat('dd/MM/yy hh:mm a').format(dateTime);
+    } catch (_) {
+      return dateTimeStr;
     }
-    return DateFormat('dd/MM/yy hh:mm a').format(dateTime);
   }
 
   @override
@@ -66,7 +67,6 @@ class _AsistenciaWidgetState extends State<AsistenciaWidget> {
                   fontSize: 22.0,
                 ),
           ),
-          actions: [],
           centerTitle: false,
           elevation: 2.0,
         ),
@@ -75,19 +75,17 @@ class _AsistenciaWidgetState extends State<AsistenciaWidget> {
           child: RefreshIndicator(
             onRefresh: () async {
               setState(() {
-                _asistenciaFuture = AsistenciaTable().queryRows(
-                  queryFn: (q) => q.order('entry_time', ascending: false),
-                );
+                _asistenciaFuture = ApiClient.getAttendance();
               });
             },
-            child: FutureBuilder<List<AsistenciaRow>>(
+            child: FutureBuilder<List<dynamic>>(
               future: _asistenciaFuture,
               builder: (context, snapshot) {
                 if (snapshot.connectionState == ConnectionState.waiting) {
-                  return Center(child: CircularProgressIndicator());
+                  return const Center(child: CircularProgressIndicator());
                 }
                 if (snapshot.hasError) {
-                  return Center(child: Text('Error: ${snapshot.error}'));
+                  return Center(child: Text('Error: \${snapshot.error}'));
                 }
                 if (!snapshot.hasData || snapshot.data!.isEmpty) {
                   return Center(
@@ -106,13 +104,6 @@ class _AsistenciaWidgetState extends State<AsistenciaWidget> {
                             style: FlutterFlowTheme.of(context).titleLarge,
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 8.0),
-                          child: Text(
-                            'Tus registros de entrada y salida aparecerán aquí.',
-                            style: FlutterFlowTheme.of(context).labelMedium,
-                          ),
-                        ),
                       ],
                     ),
                   );
@@ -122,7 +113,6 @@ class _AsistenciaWidgetState extends State<AsistenciaWidget> {
 
                 return ListView.builder(
                   padding: EdgeInsets.zero,
-                  scrollDirection: Axis.vertical,
                   itemCount: asistencias.length,
                   itemBuilder: (context, index) {
                     final asistencia = asistencias[index];
@@ -135,19 +125,23 @@ class _AsistenciaWidgetState extends State<AsistenciaWidget> {
                         ),
                         child: ListTile(
                           title: Text(
-                            'ID: ${asistencia.scannedId ?? 'Desconocido'}',
+                            "User Data ID: \${asistencia['user_data_id'] ?? 'N/A'}",
                             style: FlutterFlowTheme.of(context).titleLarge,
                           ),
                           subtitle: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Entrada: ${_formatDateTime(asistencia.entryTime)}',
+                                "Entrada: \${_formatDateTime(asistencia['check_in_time'])}",
                                 style: FlutterFlowTheme.of(context).bodyMedium,
                               ),
                               Text(
-                                'Salida: ${_formatDateTime(asistencia.exitTime)}',
+                                "Salida: \${_formatDateTime(asistencia['departure_time'])}",
                                 style: FlutterFlowTheme.of(context).bodyMedium,
+                              ),
+                              Text(
+                                "Estado: \${asistencia['status'] ?? 'N/A'}",
+                                style: FlutterFlowTheme.of(context).bodySmall,
                               ),
                             ],
                           ),

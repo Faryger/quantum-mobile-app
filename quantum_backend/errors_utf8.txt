@@ -1,0 +1,18 @@
+﻿Analyzing quantum_backend...
+
+  error - lib\api_handler.dart:51:23 - The method 'toIso8601String' isn't defined for the type 'String'. Try correcting the name to the name of an existing method, or defining a method named 'toIso8601String'. - undefined_method
+  error - lib\auth_handler.dart:42:29 - The argument type 'String?' can't be assigned to the parameter type 'String'.  - argument_type_not_assignable
+warning - bin\server.dart:68:9 - The value of the local variable 'server' isn't used. Try removing the variable or using it. - unused_local_variable
+   info - bin\server.dart:7:8 - Can't use a relative path to import a library in 'lib'. Try fixing the relative path or changing the import to a 'package:' import. - avoid_relative_lib_imports
+   info - bin\server.dart:8:8 - Can't use a relative path to import a library in 'lib'. Try fixing the relative path or changing the import to a 'package:' import. - avoid_relative_lib_imports
+   info - bin\server.dart:9:8 - Can't use a relative path to import a library in 'lib'. Try fixing the relative path or changing the import to a 'package:' import. - avoid_relative_lib_imports
+   info - db_inspect.dart:10:34 - Unnecessary braces in a string interpolation. Try removing the braces. - unnecessary_brace_in_string_interps
+   info - db_inspect.dart:19:42 - Unnecessary braces in a string interpolation. Try removing the braces. - unnecessary_brace_in_string_interps
+   info - db_inspect.dart:22:29 - Unnecessary braces in a string interpolation. Try removing the braces. - unnecessary_brace_in_string_interps
+   info - db_inspect.dart:22:38 - Unnecessary braces in a string interpolation. Try removing the braces. - unnecessary_brace_in_string_interps
+   info - db_inspect.dart:40:26 - Unnecessary braces in a string interpolation. Try removing the braces. - unnecessary_brace_in_string_interps
+   info - db_inspect.dart:42:29 - Unnecessary braces in a string interpolation. Try removing the braces. - unnecessary_brace_in_string_interps
+   info - db_inspect.dart:43:50 - Unnecessary braces in a string interpolation. Try removing the braces. - unnecessary_brace_in_string_interps
+   info - db_inspect.dart:51:25 - Unnecessary braces in a string interpolation. Try removing the braces. - unnecessary_brace_in_string_interps
+
+14 issues found.

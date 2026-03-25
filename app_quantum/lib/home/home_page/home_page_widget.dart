@@ -68,7 +68,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         ),
                   ),
                   Text(
-                    '${Supabase.instance.client.auth.currentUser?.userMetadata?['username']}!',
+                    'Usuario!',
                     style: FlutterFlowTheme.of(context).titleLarge.override(
                           fontFamily: 'Outfit',
                           letterSpacing: 0.0,
