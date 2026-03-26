@@ -6,7 +6,8 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
+import '../../backend/api_client.dart';
+import '../sign_in/sign_in_widget.dart';
 import 'sign_up_model.dart';
 export 'sign_up_model.dart';
 
@@ -593,28 +594,15 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                           }
 
                           try {
-                            await Supabase.instance.client.auth.signUp(
-                              email: email,
-                              password: password,
-                              data: {'username': _model.textController1.text},
+                            await ApiClient.register(_model.textController1.text, email, password);
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(content: Text('Cuenta creada exitosamente. Ingresa para continuar.')),
                             );
-                            if (context.mounted) {
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                SnackBar(content: Text('Cuenta creada exitosamente. Revisa tu email.')),
-                              );
-                            }
-                          } on AuthException catch (e) {
-                            if (context.mounted) {
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                SnackBar(content: Text(e.message)),
-                              );
-                            }
+                            context.pushNamed(SignInWidget.routeName);
                           } catch (e) {
-                            if (context.mounted) {
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                SnackBar(content: Text('Ocurrió un error inesperado')),
-                              );
-                            }
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(content: Text('Error al registrar: ' + e.toString())),
+                            );
                           }
                         },
                         child: Container(

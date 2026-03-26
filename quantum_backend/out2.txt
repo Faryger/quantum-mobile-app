@@ -1,0 +1,2 @@
+HTTP 500
+BODY: {"error":"MySQLServerException [1045]: Access denied for user 'root'@'localhost' (using password: YES)"}

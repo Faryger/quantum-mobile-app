@@ -1,0 +1,170 @@
+﻿Trying password: ''
+Failed with '': MySQLServerException [1045]: Access denied for user 'root'@'localhost' (using password: YES)
+Trying password: 'root'
+Connected with password: 'root'
+Tables found: [arl, attendance, blood_type, contract, contract_status, contract_type, databasechangelog, databasechangeloglock, document_type, emergency_contact, eps, journey, kinship, marital_status, permission, permission_status, permission_type, qm_all, qm_authority, qm_user, qm_user_authority, schedule, shift, support, support_type, user_data, user_permission]
+--- Schema for arl ---
+id | bigint | PRI: true
+name | varchar(50) | PRI: false
+stat_arl | varchar(255) | PRI: false
+--- Schema for attendance ---
+id | bigint | PRI: true
+check_in_time | datetime(6) | PRI: false
+date | date | PRI: false
+departure_time | datetime(6) | PRI: false
+status | varchar(255) | PRI: false
+time_in | time(6) | PRI: false
+shift_id | bigint | PRI: false
+user_data_id | bigint | PRI: false
+--- Schema for blood_type ---
+id | bigint | PRI: true
+blood_type | varchar(3) | PRI: false
+stat_rh | enum('ACTIVO','INACTIVO') | PRI: false
+--- Schema for contract ---
+id | bigint | PRI: true
+start_date | date | PRI: false
+value | int | PRI: false
+contract_status_id | bigint | PRI: false
+contract_type_id | bigint | PRI: false
+schedule_id | bigint | PRI: false
+--- Schema for contract_status ---
+id | bigint | PRI: true
+status_name | varchar(255) | PRI: false
+--- Schema for contract_type ---
+id | bigint | PRI: true
+contract_type | varchar(50) | PRI: false
+--- Schema for databasechangelog ---
+ID | varchar(255) | PRI: false
+AUTHOR | varchar(255) | PRI: false
+FILENAME | varchar(255) | PRI: false
+DATEEXECUTED | datetime | PRI: false
+ORDEREXECUTED | int | PRI: false
+EXECTYPE | varchar(10) | PRI: false
+MD5SUM | varchar(35) | PRI: false
+DESCRIPTION | varchar(255) | PRI: false
+COMMENTS | varchar(255) | PRI: false
+TAG | varchar(255) | PRI: false
+LIQUIBASE | varchar(20) | PRI: false
+CONTEXTS | varchar(255) | PRI: false
+LABELS | varchar(255) | PRI: false
+DEPLOYMENT_ID | varchar(10) | PRI: false
+--- Schema for databasechangeloglock ---
+ID | int | PRI: true
+LOCKED | tinyint | PRI: false
+LOCKGRANTED | datetime | PRI: false
+LOCKEDBY | varchar(255) | PRI: false
+--- Schema for document_type ---
+id | bigint | PRI: true
+initials | varchar(10) | PRI: false
+document_name | varchar(100) | PRI: false
+state_document_type | varchar(255) | PRI: false
+--- Schema for emergency_contact ---
+id | bigint | PRI: true
+doc_num | int | PRI: false
+first_name | varchar(100) | PRI: false
+second_name | varchar(100) | PRI: false
+first_last_name | varchar(100) | PRI: false
+second_last_name | varchar(100) | PRI: false
+blood_type_id | bigint | PRI: false
+kinship_id | bigint | PRI: false
+--- Schema for eps ---
+id | bigint | PRI: true
+name | varchar(50) | PRI: false
+status_eps | varchar(255) | PRI: false
+--- Schema for journey ---
+id | bigint | PRI: true
+journey_type | varchar(255) | PRI: false
+--- Schema for kinship ---
+id | bigint | PRI: true
+kinship_type | varchar(30) | PRI: false
+stat_kinship | enum('ACTIVO','INACTIVO') | PRI: false
+--- Schema for marital_status ---
+id | bigint | PRI: true
+type | varchar(255) | PRI: false
+status_mar_stat | varchar(255) | PRI: false
+--- Schema for permission ---
+id | bigint | PRI: true
+days | int | PRI: false
+end_date | date | PRI: false
+family_situation_detail | varchar(300) | PRI: false
+init_date | date | PRI: false
+personal_reason | varchar(500) | PRI: false
+request_date | date | PRI: false
+support_i | tinyblob | PRI: false
+support_i_content_type | varchar(255) | PRI: false
+permission_status_id | bigint | PRI: false
+permission_type_id | bigint | PRI: false
+support_id | bigint | PRI: false
+--- Schema for permission_status ---
+id | bigint | PRI: true
+type_state | varchar(255) | PRI: false
+--- Schema for permission_type ---
+id | bigint | PRI: true
+permission_type | varchar(50) | PRI: false
+--- Schema for qm_all ---
+id | bigint | PRI: true
+--- Schema for qm_authority ---
+name | varchar(50) | PRI: true
+--- Schema for qm_user ---
+id | bigint | PRI: true
+login | varchar(50) | PRI: false
+password_hash | varchar(60) | PRI: false
+email | varchar(254) | PRI: false
+image_url | varchar(256) | PRI: false
+activated | bit(1) | PRI: false
+lang_key | varchar(10) | PRI: false
+activation_key | varchar(20) | PRI: false
+reset_key | varchar(20) | PRI: false
+created_by | varchar(50) | PRI: false
+created_date | timestamp | PRI: false
+reset_date | timestamp | PRI: false
+last_modified_by | varchar(50) | PRI: false
+last_modified_date | timestamp | PRI: false
+--- Schema for qm_user_authority ---
+user_id | bigint | PRI: true
+authority_name | varchar(50) | PRI: true
+--- Schema for schedule ---
+id | bigint | PRI: true
+check_in_time | datetime(6) | PRI: false
+departure_time | datetime(6) | PRI: false
+--- Schema for shift ---
+id | bigint | PRI: true
+check_in_time | time | PRI: false
+departure_time | time | PRI: false
+start_day | varchar(20) | PRI: false
+end_day | varchar(20) | PRI: false
+journey_id | bigint | PRI: false
+--- Schema for support ---
+id | bigint | PRI: true
+support_image | tinyblob | PRI: false
+support_image_content_type | varchar(255) | PRI: false
+url | varchar(255) | PRI: false
+support_type_id | bigint | PRI: false
+--- Schema for support_type ---
+id | bigint | PRI: true
+support_type | varchar(100) | PRI: false
+--- Schema for user_data ---
+id | bigint | PRI: true
+first_name | varchar(100) | PRI: false
+second_name | varchar(100) | PRI: false
+first_last_name | varchar(100) | PRI: false
+second_last_name | varchar(100) | PRI: false
+address | varchar(100) | PRI: false
+phone_number | int | PRI: false
+document_number | int | PRI: false
+user_id | bigint | PRI: false
+shift_id | bigint | PRI: false
+document_type_id | bigint | PRI: false
+eps_id | bigint | PRI: false
+blood_type_id | bigint | PRI: false
+emergency_contact_id | bigint | PRI: false
+contract_id | bigint | PRI: false
+arl_id | bigint | PRI: false
+marital_status_id | bigint | PRI: false
+is_active | bit(1) | PRI: false
+--- Schema for user_permission ---
+id | bigint | PRI: true
+traceability | varchar(300) | PRI: false
+date | date | PRI: false
+user_data_id | bigint | PRI: false
+permission_id | bigint | PRI: false

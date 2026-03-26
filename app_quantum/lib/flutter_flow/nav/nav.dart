@@ -5,14 +5,14 @@ import 'package:go_router/go_router.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 
-import '/main.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/lat_lng.dart';
-import '/flutter_flow/place.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../main.dart';
+import '../flutter_flow_theme.dart';
+import '../lat_lng.dart';
+import '../place.dart';
+import '../flutter_flow_util.dart';
 import 'serialization_util.dart';
 
-import '/index.dart';
+import '../../index.dart';
 
 export 'package:go_router/go_router.dart';
 export 'serialization_util.dart';
@@ -91,6 +91,36 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: AsistenciaWidget.routeName,
           path: AsistenciaWidget.routePath,
           builder: (context, params) => AsistenciaWidget(),
+        ),
+        FFRoute(
+          name: ContractView.routeName,
+          path: ContractView.routePath,
+          builder: (context, params) => ContractView(),
+        ),
+        FFRoute(
+          name: JourneyView.routeName,
+          path: JourneyView.routePath,
+          builder: (context, params) => JourneyView(),
+        ),
+        FFRoute(
+          name: PermissionView.routeName,
+          path: PermissionView.routePath,
+          builder: (context, params) => PermissionView(),
+        ),
+        FFRoute(
+          name: ScheduleView.routeName,
+          path: ScheduleView.routePath,
+          builder: (context, params) => ScheduleView(),
+        ),
+        FFRoute(
+          name: ShiftView.routeName,
+          path: ShiftView.routePath,
+          builder: (context, params) => ShiftView(),
+        ),
+        FFRoute(
+          name: SupportView.routeName,
+          path: SupportView.routePath,
+          builder: (context, params) => SupportView(),
         ),
         FFRoute(
           name: ResultadoCodigoWidget.routeName,

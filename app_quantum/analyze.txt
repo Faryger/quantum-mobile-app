@@ -1,0 +1,437 @@
+﻿Resolving dependencies...
+Downloading packages...
+  app_links 6.3.2 (7.0.0 available)
+  carousel_slider 5.0.0 (5.1.2 available)
+  characters 1.4.0 (1.4.1 available)
+  cross_file 0.3.5+1 (0.3.5+2 available)
+  ffi 2.1.4 (2.2.0 available)
+  flutter_animate 4.5.0 (4.5.2 available)
+  flutter_lints 4.0.0 (6.0.0 available)
+  flutter_plugin_android_lifecycle 2.0.28 (2.0.33 available)
+  font_awesome_flutter 10.7.0 (11.0.0 available)
+  functions_client 2.4.2 (2.5.0 available)
+  go_router 12.1.3 (17.1.0 available)
+  google_fonts 6.1.0 (8.0.2 available)
+  gotrue 2.12.0 (2.19.0 available)
+! http 1.4.0 (overridden) (1.6.0 available)
+  image_picker_android 0.8.13+10 (0.8.13+14 available)
+  image_picker_ios 0.8.13+3 (0.8.13+6 available)
+  iregexp 0.1.2 (0.2.0 available)
+  json_path 0.7.2 (0.9.0 available)
+  lints 4.0.0 (6.1.0 available)
+  matcher 0.12.17 (0.12.19 available)
+  material_color_utilities 0.11.1 (0.13.0 available)
+  maybe_just_nothing 0.5.3 (0.6.0 available)
+  meta 1.17.0 (1.18.2 available)
+  page_transition 2.1.0 (2.2.1 available)
+  path_provider 2.1.4 (2.1.5 available)
+  path_provider_android 2.2.10 (2.2.22 available)
+  path_provider_foundation 2.4.0 (2.6.0 available)
+  petitparser 6.1.0 (7.0.2 available)
+  postgrest 2.4.2 (2.6.0 available)
+  provider 6.1.5 (6.1.5+1 available)
+  realtime_client 2.5.0 (2.7.1 available)
+! rxdart 0.27.7 (overridden) (0.28.0 available)
+  shared_preferences 2.5.3 (2.5.4 available)
+  shared_preferences_android 2.4.10 (2.4.21 available)
+  shared_preferences_foundation 2.5.4 (2.5.6 available)
+  source_span 1.10.1 (1.10.2 available)
+  sqflite 2.3.3+1 (2.4.2 available)
+  sqflite_common 2.5.4+3 (2.5.6 available)
+  storage_client 2.4.0 (2.5.0 available)
+  supabase 2.7.0 (2.10.3 available)
+  supabase_flutter 2.9.0 (2.12.1 available)
+  test_api 0.7.7 (0.7.11 available)
+  url_launcher 6.3.1 (6.3.2 available)
+  url_launcher_android 6.3.16 (6.3.28 available)
+  url_launcher_ios 6.3.3 (6.4.1 available)
+  url_launcher_linux 3.2.1 (3.2.2 available)
+  url_launcher_macos 3.2.2 (3.2.5 available)
+  url_launcher_web 2.4.1 (2.4.2 available)
+  url_launcher_windows 3.1.4 (3.1.5 available)
+! uuid 4.5.2 (overridden) (4.5.3 available)
+  vector_math 2.2.0 (2.3.0 available)
+  webview_flutter 4.13.0 (4.13.1 available)
+  webview_flutter_android 4.7.0 (4.10.13 available)
+  webview_flutter_platform_interface 2.13.1 (2.14.0 available)
+  webview_flutter_wkwebview 3.22.0 (3.24.1 available)
+Got dependencies!
+55 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+Analyzing app_quantum...                                        
+
+warning - Unused import: 'package:google_fonts/google_fonts.dart' - lib\asistencia\asistencia_widget.dart:6:8 - unused_import
+   info - Use 'const' literals as arguments to constructors of '@immutable' classes - lib\asistencia\asistencia_widget.dart:69:20 - prefer_const_literals_to_create_immutables
+   info - Use 'const' with the constructor to improve performance - lib\asistencia\asistencia_widget.dart:87:26 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\asistencia\asistencia_widget.dart:87:40 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\asistencia\asistencia_widget.dart:166:18 - prefer_const_constructors
+warning - Unused import: '/flutter_flow/flutter_flow_theme.dart' - lib\auth\forgot_pass\forgot_pass_model.dart:1:8 - unused_import
+warning - Unused import: '/flutter_flow/flutter_flow_widgets.dart' - lib\auth\forgot_pass\forgot_pass_model.dart:3:8 - unused_import
+warning - Unused import: 'dart:ui' - lib\auth\forgot_pass\forgot_pass_model.dart:4:8 - unused_import
+warning - Unused import: 'package:google_fonts/google_fonts.dart' - lib\auth\forgot_pass\forgot_pass_model.dart:7:8 - unused_import
+warning - Unused import: 'package:provider/provider.dart' - lib\auth\forgot_pass\forgot_pass_model.dart:8:8 - unused_import
+warning - Unused import: '/flutter_flow/flutter_flow_widgets.dart' - lib\auth\forgot_pass\forgot_pass_widget.dart:3:8 - unused_import
+   info - The import of 'dart:ui' is unnecessary because all of the used elements are also provided by the import of 'package:flutter/material.dart' - lib\auth\forgot_pass\forgot_pass_widget.dart:4:8 - unnecessary_import
+warning - Unused import: 'package:provider/provider.dart' - lib\auth\forgot_pass\forgot_pass_widget.dart:7:8 - unused_import
+   info - Use 'const' with the constructor to improve performance - lib\auth\forgot_pass\forgot_pass_widget.dart:78:32 - prefer_const_constructors
+   info - Use 'const' literals as arguments to constructors of '@immutable' classes - lib\auth\forgot_pass\forgot_pass_widget.dart:89:20 - prefer_const_literals_to_create_immutables
+   info - Use 'const' with the constructor to improve performance - lib\auth\forgot_pass\forgot_pass_widget.dart:96:22 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\forgot_pass\forgot_pass_widget.dart:124:27 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\forgot_pass\forgot_pass_widget.dart:145:27 - prefer_const_constructors
+   info - Use a 'SizedBox' to add whitespace to a layout - lib\auth\forgot_pass\forgot_pass_widget.dart:146:30 - sized_box_for_whitespace
+   info - Use 'const' with the constructor to improve performance - lib\auth\forgot_pass\forgot_pass_widget.dart:226:45 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\forgot_pass\forgot_pass_widget.dart:252:32 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\forgot_pass\forgot_pass_widget.dart:255:28 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\forgot_pass\forgot_pass_widget.dart:261:27 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\forgot_pass\forgot_pass_widget.dart:261:45 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\forgot_pass\forgot_pass_widget.dart:269:29 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\forgot_pass\forgot_pass_widget.dart:269:47 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\forgot_pass\forgot_pass_widget.dart:275:29 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\forgot_pass\forgot_pass_widget.dart:275:47 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\forgot_pass\forgot_pass_widget.dart:287:29 - prefer_const_constructors
+   info - Use 'const' literals as arguments to constructors of '@immutable' classes - lib\auth\forgot_pass\forgot_pass_widget.dart:289:34 - prefer_const_literals_to_create_immutables
+   info - Use 'const' with the constructor to improve performance - lib\auth\forgot_pass\forgot_pass_widget.dart:290:34 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\forgot_pass\forgot_pass_widget.dart:291:32 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\forgot_pass\forgot_pass_widget.dart:296:36 - prefer_const_constructors
+warning - Unused import: '/flutter_flow/flutter_flow_theme.dart' - lib\auth\forgot_pass_step3\forgot_pass_step3_model.dart:1:8 - unused_import
+warning - Unused import: '/flutter_flow/flutter_flow_widgets.dart' - lib\auth\forgot_pass_step3\forgot_pass_step3_model.dart:3:8 - unused_import
+warning - Unused import: 'dart:ui' - lib\auth\forgot_pass_step3\forgot_pass_step3_model.dart:4:8 - unused_import
+warning - Unused import: 'package:google_fonts/google_fonts.dart' - lib\auth\forgot_pass_step3\forgot_pass_step3_model.dart:7:8 - unused_import
+warning - Unused import: 'package:provider/provider.dart' - lib\auth\forgot_pass_step3\forgot_pass_step3_model.dart:8:8 - unused_import
+warning - Unused import: '/flutter_flow/flutter_flow_widgets.dart' - lib\auth\forgot_pass_step3\forgot_pass_step3_widget.dart:3:8 - unused_import
+   info - The import of 'dart:ui' is unnecessary because all of the used elements are also provided by the import of 'package:flutter/material.dart' - lib\auth\forgot_pass_step3\forgot_pass_step3_widget.dart:4:8 - unnecessary_import
+warning - Unused import: 'package:provider/provider.dart' - lib\auth\forgot_pass_step3\forgot_pass_step3_widget.dart:7:8 - unused_import
+   info - Use 'const' with the constructor to improve performance - lib\auth\forgot_pass_step3\forgot_pass_step3_widget.dart:80:32 - prefer_const_constructors
+   info - Use 'const' literals as arguments to constructors of '@immutable' classes - lib\auth\forgot_pass_step3\forgot_pass_step3_widget.dart:91:20 - prefer_const_literals_to_create_immutables
+   info - Use 'const' with the constructor to improve performance - lib\auth\forgot_pass_step3\forgot_pass_step3_widget.dart:98:22 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\forgot_pass_step3\forgot_pass_step3_widget.dart:126:27 - prefer_const_constructors
+   info - Use a 'SizedBox' to add whitespace to a layout - lib\auth\forgot_pass_step3\forgot_pass_step3_widget.dart:127:30 - sized_box_for_whitespace
+   info - Use 'const' with the constructor to improve performance - lib\auth\forgot_pass_step3\forgot_pass_step3_widget.dart:207:45 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\forgot_pass_step3\forgot_pass_step3_widget.dart:235:27 - prefer_const_constructors
+   info - Use a 'SizedBox' to add whitespace to a layout - lib\auth\forgot_pass_step3\forgot_pass_step3_widget.dart:236:30 - sized_box_for_whitespace
+   info - Use 'const' with the constructor to improve performance - lib\auth\forgot_pass_step3\forgot_pass_step3_widget.dart:316:45 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\forgot_pass_step3\forgot_pass_step3_widget.dart:342:32 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\forgot_pass_step3\forgot_pass_step3_widget.dart:345:28 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\forgot_pass_step3\forgot_pass_step3_widget.dart:353:27 - prefer_const_constructors
+   info - Use 'const' literals as arguments to constructors of '@immutable' classes - lib\auth\forgot_pass_step3\forgot_pass_step3_widget.dart:355:32 - prefer_const_literals_to_create_immutables
+   info - Use 'const' with the constructor to improve performance - lib\auth\forgot_pass_step3\forgot_pass_step3_widget.dart:356:32 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\forgot_pass_step3\forgot_pass_step3_widget.dart:357:30 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\forgot_pass_step3\forgot_pass_step3_widget.dart:362:34 - prefer_const_constructors
+warning - Unused import: '/flutter_flow/flutter_flow_theme.dart' - lib\auth\sign_in\sign_in_model.dart:1:8 - unused_import
+warning - Unused import: '/flutter_flow/flutter_flow_widgets.dart' - lib\auth\sign_in\sign_in_model.dart:3:8 - unused_import
+warning - Unused import: 'dart:ui' - lib\auth\sign_in\sign_in_model.dart:4:8 - unused_import
+warning - Unused import: 'package:flutter/gestures.dart' - lib\auth\sign_in\sign_in_model.dart:7:8 - unused_import
+warning - Unused import: 'package:google_fonts/google_fonts.dart' - lib\auth\sign_in\sign_in_model.dart:9:8 - unused_import
+warning - Unused import: 'package:provider/provider.dart' - lib\auth\sign_in\sign_in_model.dart:10:8 - unused_import
+warning - Unused import: '/flutter_flow/flutter_flow_widgets.dart' - lib\auth\sign_in\sign_in_widget.dart:3:8 - unused_import
+   info - The import of 'dart:ui' is unnecessary because all of the used elements are also provided by the import of 'package:flutter/material.dart' - lib\auth\sign_in\sign_in_widget.dart:4:8 - unnecessary_import
+warning - Unused import: 'package:flutter/gestures.dart' - lib\auth\sign_in\sign_in_widget.dart:6:8 - unused_import
+warning - Unused import: 'package:provider/provider.dart' - lib\auth\sign_in\sign_in_widget.dart:9:8 - unused_import
+   info - Use 'const' literals as arguments to constructors of '@immutable' classes - lib\auth\sign_in\sign_in_widget.dart:61:20 - prefer_const_literals_to_create_immutables
+   info - Use 'const' with the constructor to improve performance - lib\auth\sign_in\sign_in_widget.dart:68:22 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\sign_in\sign_in_widget.dart:96:27 - prefer_const_constructors
+   info - Use a 'SizedBox' to add whitespace to a layout - lib\auth\sign_in\sign_in_widget.dart:97:30 - sized_box_for_whitespace
+   info - Use 'const' with the constructor to improve performance - lib\auth\sign_in\sign_in_widget.dart:177:45 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\sign_in\sign_in_widget.dart:205:27 - prefer_const_constructors
+   info - Use a 'SizedBox' to add whitespace to a layout - lib\auth\sign_in\sign_in_widget.dart:206:30 - sized_box_for_whitespace
+   info - Use 'const' with the constructor to improve performance - lib\auth\sign_in\sign_in_widget.dart:286:45 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\sign_in\sign_in_widget.dart:313:34 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\sign_in\sign_in_widget.dart:316:29 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\sign_in\sign_in_widget.dart:350:28 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\sign_in\sign_in_widget.dart:365:31 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\sign_in\sign_in_widget.dart:365:49 - prefer_const_constructors
+   info - Don't use 'BuildContext's across async gaps - lib\auth\sign_in\sign_in_widget.dart:375:29 - use_build_context_synchronously
+  error - The getter 'routeName' isn't defined for the type 'HomePageWidget' - lib\auth\sign_in\sign_in_widget.dart:375:60 - undefined_getter
+   info - Don't use 'BuildContext's across async gaps - lib\auth\sign_in\sign_in_widget.dart:377:50 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\auth\sign_in\sign_in_widget.dart:381:50 - use_build_context_synchronously
+   info - Use 'const' with the constructor to improve performance - lib\auth\sign_in\sign_in_widget.dart:382:31 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\sign_in\sign_in_widget.dart:382:49 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\sign_in\sign_in_widget.dart:393:33 - prefer_const_constructors
+   info - Use 'const' literals as arguments to constructors of '@immutable' classes - lib\auth\sign_in\sign_in_widget.dart:395:38 - prefer_const_literals_to_create_immutables
+   info - Use 'const' with the constructor to improve performance - lib\auth\sign_in\sign_in_widget.dart:396:38 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\sign_in\sign_in_widget.dart:397:36 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\sign_in\sign_in_widget.dart:402:40 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\sign_in\sign_in_widget.dart:427:29 - prefer_const_constructors
+warning - Unused import: '/flutter_flow/flutter_flow_theme.dart' - lib\auth\sign_up\sign_up_model.dart:1:8 - unused_import
+warning - Unused import: '/flutter_flow/flutter_flow_widgets.dart' - lib\auth\sign_up\sign_up_model.dart:3:8 - unused_import
+warning - Unused import: 'dart:ui' - lib\auth\sign_up\sign_up_model.dart:4:8 - unused_import
+warning - Unused import: 'package:flutter/gestures.dart' - lib\auth\sign_up\sign_up_model.dart:6:8 - unused_import
+warning - Unused import: 'package:google_fonts/google_fonts.dart' - lib\auth\sign_up\sign_up_model.dart:8:8 - unused_import
+warning - Unused import: 'package:provider/provider.dart' - lib\auth\sign_up\sign_up_model.dart:9:8 - unused_import
+warning - Unused import: '/flutter_flow/flutter_flow_widgets.dart' - lib\auth\sign_up\sign_up_widget.dart:3:8 - unused_import
+   info - The import of 'dart:ui' is unnecessary because all of the used elements are also provided by the import of 'package:flutter/material.dart' - lib\auth\sign_up\sign_up_widget.dart:4:8 - unnecessary_import
+warning - Unused import: 'package:flutter/gestures.dart' - lib\auth\sign_up\sign_up_widget.dart:5:8 - unused_import
+warning - Unused import: 'package:provider/provider.dart' - lib\auth\sign_up\sign_up_widget.dart:8:8 - unused_import
+   info - Use 'const' with the constructor to improve performance - lib\auth\sign_up\sign_up_widget.dart:88:32 - prefer_const_constructors
+   info - Use 'const' literals as arguments to constructors of '@immutable' classes - lib\auth\sign_up\sign_up_widget.dart:99:20 - prefer_const_literals_to_create_immutables
+   info - Use 'const' with the constructor to improve performance - lib\auth\sign_up\sign_up_widget.dart:106:22 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\sign_up\sign_up_widget.dart:134:27 - prefer_const_constructors
+   info - Use a 'SizedBox' to add whitespace to a layout - lib\auth\sign_up\sign_up_widget.dart:135:30 - sized_box_for_whitespace
+   info - Use 'const' with the constructor to improve performance - lib\auth\sign_up\sign_up_widget.dart:215:45 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\sign_up\sign_up_widget.dart:243:27 - prefer_const_constructors
+   info - Use a 'SizedBox' to add whitespace to a layout - lib\auth\sign_up\sign_up_widget.dart:244:30 - sized_box_for_whitespace
+   info - Use 'const' with the constructor to improve performance - lib\auth\sign_up\sign_up_widget.dart:324:45 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\sign_up\sign_up_widget.dart:352:27 - prefer_const_constructors
+   info - Use a 'SizedBox' to add whitespace to a layout - lib\auth\sign_up\sign_up_widget.dart:353:30 - sized_box_for_whitespace
+   info - Use 'const' with the constructor to improve performance - lib\auth\sign_up\sign_up_widget.dart:433:45 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\sign_up\sign_up_widget.dart:461:27 - prefer_const_constructors
+   info - Use a 'SizedBox' to add whitespace to a layout - lib\auth\sign_up\sign_up_widget.dart:462:30 - sized_box_for_whitespace
+   info - Use 'const' with the constructor to improve performance - lib\auth\sign_up\sign_up_widget.dart:542:45 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\sign_up\sign_up_widget.dart:568:32 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\sign_up\sign_up_widget.dart:571:28 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\sign_up\sign_up_widget.dart:583:31 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\sign_up\sign_up_widget.dart:583:49 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\sign_up\sign_up_widget.dart:590:31 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\sign_up\sign_up_widget.dart:590:49 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\sign_up\sign_up_widget.dart:603:33 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\sign_up\sign_up_widget.dart:603:51 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\sign_up\sign_up_widget.dart:615:33 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\sign_up\sign_up_widget.dart:615:51 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\sign_up\sign_up_widget.dart:627:33 - prefer_const_constructors
+   info - Use 'const' literals as arguments to constructors of '@immutable' classes - lib\auth\sign_up\sign_up_widget.dart:629:38 - prefer_const_literals_to_create_immutables
+   info - Use 'const' with the constructor to improve performance - lib\auth\sign_up\sign_up_widget.dart:630:38 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\sign_up\sign_up_widget.dart:631:36 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\sign_up\sign_up_widget.dart:636:40 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\auth\sign_up\sign_up_widget.dart:661:29 - prefer_const_constructors
+warning - The library 'package:supabase_flutter/supabase_flutter.dart' doesn't export a member with the hidden name 'Provider' - lib\backend\supabase\database\database.dart:2:62 - undefined_hidden_name
+   info - Use 'TypeName _' instead of a type literal - lib\backend\supabase\database\row.dart:47:10 - type_literal_in_constant_pattern
+   info - Use 'TypeName _' instead of a type literal - lib\backend\supabase\database\row.dart:49:10 - type_literal_in_constant_pattern
+   info - Use 'TypeName _' instead of a type literal - lib\backend\supabase\database\row.dart:51:10 - type_literal_in_constant_pattern
+   info - Use 'TypeName _' instead of a type literal - lib\backend\supabase\database\row.dart:68:10 - type_literal_in_constant_pattern
+   info - Use 'TypeName _' instead of a type literal - lib\backend\supabase\database\row.dart:70:10 - type_literal_in_constant_pattern
+   info - Use 'TypeName _' instead of a type literal - lib\backend\supabase\database\row.dart:72:10 - type_literal_in_constant_pattern
+   info - Use 'TypeName _' instead of a type literal - lib\backend\supabase\database\row.dart:74:10 - type_literal_in_constant_pattern
+   info - Use 'TypeName _' instead of a type literal - lib\backend\supabase\database\row.dart:76:10 - type_literal_in_constant_pattern
+   info - Don't invoke 'print' in production code - lib\backend\supabase\database\table.dart:26:30 - avoid_print
+   info - Parameter 'data' could be a super parameter - lib\backend\supabase\database\tables\asistencia.dart:12:3 - use_super_parameters
+warning - The library 'package:supabase_flutter/supabase_flutter.dart' doesn't export a member with the hidden name 'Provider' - lib\backend\supabase\supabase.dart:1:62 - undefined_hidden_name
+warning - Unused import: '/flutter_flow/flutter_flow_util.dart' - lib\backend\supabase\supabase.dart:2:8 - unused_import
+   info - Use 'const' with the constructor to improve performance - lib\backend\supabase\supabase.dart:27:13 - prefer_const_constructors
+warning - Unused import: '/flutter_flow/flutter_flow_theme.dart' - lib\components\nav_bar_model.dart:1:8 - unused_import
+warning - Unused import: '/flutter_flow/flutter_flow_widgets.dart' - lib\components\nav_bar_model.dart:3:8 - unused_import
+warning - Unused import: 'dart:ui' - lib\components\nav_bar_model.dart:4:8 - unused_import
+warning - Unused import: '/index.dart' - lib\components\nav_bar_model.dart:5:8 - unused_import
+warning - Unused import: 'package:google_fonts/google_fonts.dart' - lib\components\nav_bar_model.dart:8:8 - unused_import
+warning - Unused import: 'package:provider/provider.dart' - lib\components\nav_bar_model.dart:9:8 - unused_import
+   info - The import of 'dart:ui' is unnecessary because all of the used elements are also provided by the import of 'package:flutter/material.dart' - lib\components\nav_bar_widget.dart:3:8 - unnecessary_import
+warning - Unused import: 'package:google_fonts/google_fonts.dart' - lib\components\nav_bar_widget.dart:6:8 - unused_import
+warning - Unused import: 'package:provider/provider.dart' - lib\components\nav_bar_widget.dart:7:8 - unused_import
+   info - Use 'const' with the constructor to improve performance - lib\components\nav_bar_widget.dart:55:16 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\components\nav_bar_widget.dart:63:20 - prefer_const_constructors
+  error - The getter 'routeName' isn't defined for the type 'HomePageWidget' - lib\components\nav_bar_widget.dart:75:36 - undefined_getter
+   info - Use 'const' with the constructor to improve performance - lib\components\nav_bar_widget.dart:77:43 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\components\nav_bar_widget.dart:80:35 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\components\nav_bar_widget.dart:88:31 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\components\nav_bar_widget.dart:92:32 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\components\nav_bar_widget.dart:110:43 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\components\nav_bar_widget.dart:113:35 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\components\nav_bar_widget.dart:121:31 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\components\nav_bar_widget.dart:125:32 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\components\nav_bar_widget.dart:143:43 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\components\nav_bar_widget.dart:146:35 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\components\nav_bar_widget.dart:154:31 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\components\nav_bar_widget.dart:158:32 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\components\nav_bar_widget.dart:176:43 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\components\nav_bar_widget.dart:179:35 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\components\nav_bar_widget.dart:187:31 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\components\nav_bar_widget.dart:191:32 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\components\nav_bar_widget.dart:209:43 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\components\nav_bar_widget.dart:212:35 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\components\nav_bar_widget.dart:220:31 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\components\nav_bar_widget.dart:224:32 - prefer_const_constructors
+   info - Parameter 'key' could be a super parameter - lib\flutter_flow\flutter_flow_icon_button.dart:5:9 - use_super_parameters
+   info - 'MaterialStateProperty' is deprecated and shouldn't be used. Use WidgetStateProperty instead. Moved to the Widgets layer to make code available outside of Material. This feature was deprecated after v3.19.0-0.3.pre - lib\flutter_flow\flutter_flow_icon_button.dart:86:14 - deprecated_member_use
+   info - 'MaterialState' is deprecated and shouldn't be used. Use WidgetState instead. Moved to the Widgets layer to make code available outside of Material. This feature was deprecated after v3.19.0-0.3.pre - lib\flutter_flow\flutter_flow_icon_button.dart:88:31 - deprecated_member_use
+   info - 'MaterialStateProperty' is deprecated and shouldn't be used. Use WidgetStateProperty instead. Moved to the Widgets layer to make code available outside of Material. This feature was deprecated after v3.19.0-0.3.pre - lib\flutter_flow\flutter_flow_icon_button.dart:116:18 - deprecated_member_use
+   info - 'MaterialState' is deprecated and shouldn't be used. Use WidgetState instead. Moved to the Widgets layer to make code available outside of Material. This feature was deprecated after v3.19.0-0.3.pre - lib\flutter_flow\flutter_flow_icon_button.dart:118:31 - deprecated_member_use
+   info - 'MaterialState' is deprecated and shouldn't be used. Use WidgetState instead. Moved to the Widgets layer to make code available outside of Material. This feature was deprecated after v3.19.0-0.3.pre - lib\flutter_flow\flutter_flow_icon_button.dart:122:31 - deprecated_member_use
+   info - 'MaterialStateProperty' is deprecated and shouldn't be used. Use WidgetStateProperty instead. Moved to the Widgets layer to make code available outside of Material. This feature was deprecated after v3.19.0-0.3.pre - lib\flutter_flow\flutter_flow_icon_button.dart:129:24 - deprecated_member_use
+   info - 'MaterialState' is deprecated and shouldn't be used. Use WidgetState instead. Moved to the Widgets layer to make code available outside of Material. This feature was deprecated after v3.19.0-0.3.pre - lib\flutter_flow\flutter_flow_icon_button.dart:131:31 - deprecated_member_use
+   info - 'MaterialState' is deprecated and shouldn't be used. Use WidgetState instead. Moved to the Widgets layer to make code available outside of Material. This feature was deprecated after v3.19.0-0.3.pre - lib\flutter_flow\flutter_flow_icon_button.dart:135:31 - deprecated_member_use
+   info - 'MaterialStateProperty' is deprecated and shouldn't be used. Use WidgetStateProperty instead. Moved to the Widgets layer to make code available outside of Material. This feature was deprecated after v3.19.0-0.3.pre - lib\flutter_flow\flutter_flow_icon_button.dart:143:21 - deprecated_member_use
+   info - 'MaterialState' is deprecated and shouldn't be used. Use WidgetState instead. Moved to the Widgets layer to make code available outside of Material. This feature was deprecated after v3.19.0-0.3.pre - lib\flutter_flow\flutter_flow_icon_button.dart:144:29 - deprecated_member_use
+   info - Use a 'SizedBox' to add whitespace to a layout - lib\flutter_flow\flutter_flow_icon_button.dart:163:19 - sized_box_for_whitespace
+warning - Unused import: 'flutter_flow_util.dart' - lib\flutter_flow\flutter_flow_model.dart:5:8 - unused_import
+   info - Unnecessary use of getter and setter to wrap a field - lib\flutter_flow\flutter_flow_model.dart:57:10 - unnecessary_getters_setters
+   info - Unnecessary return type on a setter - lib\flutter_flow\flutter_flow_model.dart:58:3 - avoid_return_types_on_setters
+   info - Function literals shouldn't be passed to 'forEach' - lib\flutter_flow\flutter_flow_model.dart:138:44 - avoid_function_literals_in_foreach_calls
+   info - Use 'TypeName _' instead of a type literal - lib\flutter_flow\flutter_flow_model.dart:165:10 - type_literal_in_constant_pattern
+   info - Use 'TypeName _' instead of a type literal - lib\flutter_flow\flutter_flow_model.dart:167:10 - type_literal_in_constant_pattern
+   info - Use 'TypeName _' instead of a type literal - lib\flutter_flow\flutter_flow_model.dart:169:10 - type_literal_in_constant_pattern
+   info - Use 'TypeName _' instead of a type literal - lib\flutter_flow\flutter_flow_model.dart:171:10 - type_literal_in_constant_pattern
+warning - Unused import: 'lat_lng.dart' - lib\flutter_flow\flutter_flow_util.dart:16:8 - unused_import
+   info - Use 'TypeName _' instead of a type literal - lib\flutter_flow\flutter_flow_util.dart:164:10 - type_literal_in_constant_pattern
+   info - Use 'TypeName _' instead of a type literal - lib\flutter_flow\flutter_flow_util.dart:167:10 - type_literal_in_constant_pattern
+   info - Use 'const' with the constructor to improve performance - lib\flutter_flow\flutter_flow_util.dart:284:24 - prefer_const_constructors
+   info - Use a 'SizedBox' to add whitespace to a layout - lib\flutter_flow\flutter_flow_util.dart:285:22 - sized_box_for_whitespace
+   info - The import of 'package:go_router/go_router.dart' is unnecessary because all of the used elements are also provided by the import of '../flutter_flow_util.dart' - lib\flutter_flow\nav\nav.dart:4:8 - unnecessary_import
+   info - The import of 'package:page_transition/page_transition.dart' is unnecessary because all of the used elements are also provided by the import of '../flutter_flow_util.dart' - lib\flutter_flow\nav\nav.dart:5:8 - unnecessary_import
+warning - Unused import: '../../main.dart' - lib\flutter_flow\nav\nav.dart:8:8 - unused_import
+warning - Unused import: '../flutter_flow_theme.dart' - lib\flutter_flow\nav\nav.dart:9:8 - unused_import
+warning - Unused import: '../lat_lng.dart' - lib\flutter_flow\nav\nav.dart:10:8 - unused_import
+warning - Unused import: '../place.dart' - lib\flutter_flow\nav\nav.dart:11:8 - unused_import
+   info - The import of 'serialization_util.dart' is unnecessary because all of the used elements are also provided by the import of '../flutter_flow_util.dart' - lib\flutter_flow\nav\nav.dart:13:8 - unnecessary_import
+   info - Use 'const' with the constructor to improve performance - lib\flutter_flow\nav\nav.dart:43:41 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\flutter_flow\nav\nav.dart:48:36 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\flutter_flow\nav\nav.dart:53:41 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\flutter_flow\nav\nav.dart:58:41 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\flutter_flow\nav\nav.dart:63:41 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\flutter_flow\nav\nav.dart:68:41 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\flutter_flow\nav\nav.dart:73:41 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\flutter_flow\nav\nav.dart:78:41 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\flutter_flow\nav\nav.dart:83:41 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\flutter_flow\nav\nav.dart:88:41 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\flutter_flow\nav\nav.dart:93:41 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\flutter_flow\nav\nav.dart:267:41 - prefer_const_constructors
+warning - This default clause is covered by the previous cases - lib\flutter_flow\nav\serialization_util.dart:73:7 - unreachable_switch_default
+   info - Don't invoke 'print' in production code - lib\flutter_flow\nav\serialization_util.dart:78:5 - avoid_print
+   info - The constant name 'String' isn't a lowerCamelCase identifier - lib\flutter_flow\nav\serialization_util.dart:139:3 - constant_identifier_names
+   info - The constant name 'DateTime' isn't a lowerCamelCase identifier - lib\flutter_flow\nav\serialization_util.dart:141:3 - constant_identifier_names
+   info - The constant name 'DateTimeRange' isn't a lowerCamelCase identifier - lib\flutter_flow\nav\serialization_util.dart:142:3 - constant_identifier_names
+   info - The constant name 'LatLng' isn't a lowerCamelCase identifier - lib\flutter_flow\nav\serialization_util.dart:143:3 - constant_identifier_names
+   info - The constant name 'Color' isn't a lowerCamelCase identifier - lib\flutter_flow\nav\serialization_util.dart:144:3 - constant_identifier_names
+   info - The constant name 'FFPlace' isn't a lowerCamelCase identifier - lib\flutter_flow\nav\serialization_util.dart:145:3 - constant_identifier_names
+   info - The constant name 'FFUploadedFile' isn't a lowerCamelCase identifier - lib\flutter_flow\nav\serialization_util.dart:146:3 - constant_identifier_names
+   info - The constant name 'JSON' isn't a lowerCamelCase identifier - lib\flutter_flow\nav\serialization_util.dart:147:3 - constant_identifier_names
+   info - Use 'whereType' to select elements of a given type - lib\flutter_flow\nav\serialization_util.dart:165:12 - prefer_iterable_wheretype
+warning - This default clause is covered by the previous cases - lib\flutter_flow\nav\serialization_util.dart:199:7 - unreachable_switch_default
+   info - Don't invoke 'print' in production code - lib\flutter_flow\nav\serialization_util.dart:203:5 - avoid_print
+warning - Unused import: '/flutter_flow/flutter_flow_theme.dart' - lib\home\home_page\home_page_model.dart:2:8 - unused_import
+warning - Unused import: '/flutter_flow/flutter_flow_widgets.dart' - lib\home\home_page\home_page_model.dart:4:8 - unused_import
+warning - Unused import: 'dart:ui' - lib\home\home_page\home_page_model.dart:5:8 - unused_import
+warning - Unused import: 'package:google_fonts/google_fonts.dart' - lib\home\home_page\home_page_model.dart:9:8 - unused_import
+warning - Unused import: 'package:provider/provider.dart' - lib\home\home_page\home_page_model.dart:10:8 - unused_import
+   info - The import of 'dart:ui' is unnecessary because all of the used elements are also provided by the import of 'package:flutter/material.dart' - lib\home\home_page\home_page_widget.dart:5:8 - unnecessary_import
+warning - Unused import: 'package:carousel_slider/carousel_slider.dart' - lib\home\home_page\home_page_widget.dart:6:8 - unused_import
+warning - Unused import: 'package:google_fonts/google_fonts.dart' - lib\home\home_page\home_page_widget.dart:8:8 - unused_import
+warning - Unused import: 'package:provider/provider.dart' - lib\home\home_page\home_page_widget.dart:9:8 - unused_import
+   info - Use 'const' with the constructor to improve performance - lib\home\home_page\home_page_widget.dart:78:28 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\home\home_page\home_page_widget.dart:91:32 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\home\home_page\home_page_widget.dart:120:29 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\home\home_page\home_page_widget.dart:133:29 - prefer_const_constructors
+   info - Use a 'SizedBox' to add whitespace to a layout - lib\home\home_page\home_page_widget.dart:134:32 - sized_box_for_whitespace
+   info - Use 'const' with the constructor to improve performance - lib\home\home_page\home_page_widget.dart:142:42 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\home\home_page\home_page_widget.dart:153:46 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\home\home_page\home_page_widget.dart:167:47 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\home\home_page\home_page_widget.dart:185:42 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\home\home_page\home_page_widget.dart:196:46 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\home\home_page\home_page_widget.dart:210:47 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\home\home_page\home_page_widget.dart:228:42 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\home\home_page\home_page_widget.dart:239:46 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\home\home_page\home_page_widget.dart:253:47 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\home\home_page\home_page_widget.dart:275:34 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\home\home_page\home_page_widget.dart:288:34 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\home\home_page\home_page_widget.dart:298:38 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\home\home_page\home_page_widget.dart:323:50 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\home\home_page\home_page_widget.dart:331:56 - prefer_const_constructors
+   info - Don't invoke 'print' in production code - lib\home\home_page\home_page_widget.dart:345:41 - avoid_print
+   info - Use 'const' with the constructor to improve performance - lib\home\home_page\home_page_widget.dart:350:50 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\home\home_page\home_page_widget.dart:353:45 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\home\home_page\home_page_widget.dart:367:53 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\home\home_page\home_page_widget.dart:384:29 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\home\home_page\home_page_widget.dart:396:34 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\home\home_page\home_page_widget.dart:438:34 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\home\home_page\home_page_widget.dart:489:18 - prefer_const_constructors
+warning - Unused import: 'package:flutter/gestures.dart' - lib\main.dart:1:8 - unused_import
+warning - Unused import: 'package:supabase_flutter/supabase_flutter.dart' - lib\main.dart:4:8 - unused_import
+warning - Unused import: 'flutter_flow/flutter_flow_theme.dart' - lib\main.dart:8:8 - unused_import
+   info - The import of 'flutter_flow/nav/nav.dart' is unnecessary because all of the used elements are also provided by the import of 'flutter_flow/flutter_flow_util.dart' - lib\main.dart:10:8 - unnecessary_import
+warning - Unused import: 'index.dart' - lib\main.dart:11:8 - unused_import
+   info - Constructors for public widgets should have a named 'key' parameter - lib\main.dart:23:7 - use_key_in_widget_constructors
+   info - Invalid use of a private type in a public API - lib\main.dart:28:10 - library_private_types_in_public_api
+   info - Use 'const' literals as arguments to constructors of '@immutable' classes - lib\main.dart:67:31 - prefer_const_literals_to_create_immutables
+warning - Unused import: '/flutter_flow/flutter_flow_icon_button.dart' - lib\pag\resultado_codigo\resultado_codigo_model.dart:1:8 - unused_import
+warning - Unused import: '/flutter_flow/flutter_flow_theme.dart' - lib\pag\resultado_codigo\resultado_codigo_model.dart:2:8 - unused_import
+warning - Unused import: '/flutter_flow/flutter_flow_widgets.dart' - lib\pag\resultado_codigo\resultado_codigo_model.dart:4:8 - unused_import
+warning - Unused import: 'dart:ui' - lib\pag\resultado_codigo\resultado_codigo_model.dart:5:8 - unused_import
+warning - Unused import: 'package:google_fonts/google_fonts.dart' - lib\pag\resultado_codigo\resultado_codigo_model.dart:9:8 - unused_import
+warning - Unused import: 'package:provider/provider.dart' - lib\pag\resultado_codigo\resultado_codigo_model.dart:10:8 - unused_import
+warning - Unused import: 'package:google_fonts/google_fonts.dart' - lib\pag\resultado_codigo\resultado_codigo_widget.dart:6:8 - unused_import
+   info - The import of 'package:intl/intl.dart' is unnecessary because all of the used elements are also provided by the import of '/flutter_flow/flutter_flow_util.dart' - lib\pag\resultado_codigo\resultado_codigo_widget.dart:7:8 - unnecessary_import
+   info - Use 'const' with the constructor to improve performance - lib\pag\resultado_codigo\resultado_codigo_widget.dart:47:37 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\pag\resultado_codigo\resultado_codigo_widget.dart:82:31 - prefer_const_constructors
+  error - The method 'is_' isn't defined for the type 'PostgrestFilterBuilder' - lib\pag\resultado_codigo\resultado_codigo_widget.dart:99:14 - undefined_method
+   info - Use 'const' with the constructor to improve performance - lib\pag\resultado_codigo\resultado_codigo_widget.dart:115:33 - prefer_const_constructors
+  error - 3 positional arguments expected by 'not', but 0 found - lib\pag\resultado_codigo\resultado_codigo_widget.dart:132:20 - not_enough_positional_arguments
+  error - The method 'is_' isn't defined for the type 'PostgrestFilterBuilder' - lib\pag\resultado_codigo\resultado_codigo_widget.dart:133:16 - undefined_method
+   info - Use 'const' with the constructor to improve performance - lib\pag\resultado_codigo\resultado_codigo_widget.dart:177:26 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\pag\resultado_codigo\resultado_codigo_widget.dart:184:15 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\pag\resultado_codigo\resultado_codigo_widget.dart:194:32 - prefer_const_constructors
+  error - The getter 'routeName' isn't defined for the type 'HomePageWidget' - lib\pag\resultado_codigo\resultado_codigo_widget.dart:239:52 - undefined_getter
+   info - Use 'const' with the constructor to improve performance - lib\pag\resultado_codigo\resultado_codigo_widget.dart:255:33 - prefer_const_constructors
+warning - Unused import: '/flutter_flow/flutter_flow_theme.dart' - lib\permisos\permises_list\permises_list_model.dart:2:8 - unused_import
+warning - Unused import: '/flutter_flow/flutter_flow_widgets.dart' - lib\permisos\permises_list\permises_list_model.dart:4:8 - unused_import
+warning - Unused import: 'dart:ui' - lib\permisos\permises_list\permises_list_model.dart:5:8 - unused_import
+warning - Unused import: 'package:google_fonts/google_fonts.dart' - lib\permisos\permises_list\permises_list_model.dart:8:8 - unused_import
+warning - Unused import: 'package:provider/provider.dart' - lib\permisos\permises_list\permises_list_model.dart:9:8 - unused_import
+warning - Unused import: '/flutter_flow/flutter_flow_widgets.dart' - lib\permisos\permises_list\permises_list_widget.dart:4:8 - unused_import
+   info - The import of 'dart:ui' is unnecessary because all of the used elements are also provided by the import of 'package:flutter/material.dart' - lib\permisos\permises_list\permises_list_widget.dart:5:8 - unnecessary_import
+warning - Unused import: 'package:provider/provider.dart' - lib\permisos\permises_list\permises_list_widget.dart:8:8 - unused_import
+   info - Use 'const' literals as arguments to constructors of '@immutable' classes - lib\permisos\permises_list\permises_list_widget.dart:70:20 - prefer_const_literals_to_create_immutables
+   info - Use 'const' with the constructor to improve performance - lib\permisos\permises_list\permises_list_widget.dart:92:42 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\permisos\permises_list\permises_list_widget.dart:119:45 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\permisos\permises_list\permises_list_widget.dart:127:54 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\permisos\permises_list\permises_list_widget.dart:237:56 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\permisos\permises_list\permises_list_widget.dart:247:41 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\permisos\permises_list\permises_list_widget.dart:248:45 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\permisos\permises_list\permises_list_widget.dart:249:43 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\permisos\permises_list\permises_list_widget.dart:253:36 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\permisos\permises_list\permises_list_widget.dart:285:45 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\permisos\permises_list\permises_list_widget.dart:293:54 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\permisos\permises_list\permises_list_widget.dart:403:56 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\permisos\permises_list\permises_list_widget.dart:412:43 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\permisos\permises_list\permises_list_widget.dart:413:47 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\permisos\permises_list\permises_list_widget.dart:414:45 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\permisos\permises_list\permises_list_widget.dart:425:26 - prefer_const_constructors
+warning - Unused import: '/flutter_flow/flutter_flow_theme.dart' - lib\profile\profile\profile_model.dart:2:8 - unused_import
+warning - Unused import: '/flutter_flow/flutter_flow_widgets.dart' - lib\profile\profile\profile_model.dart:4:8 - unused_import
+warning - Unused import: 'dart:ui' - lib\profile\profile\profile_model.dart:5:8 - unused_import
+warning - Unused import: 'package:google_fonts/google_fonts.dart' - lib\profile\profile\profile_model.dart:8:8 - unused_import
+warning - Unused import: 'package:provider/provider.dart' - lib\profile\profile\profile_model.dart:9:8 - unused_import
+   info - The import of 'dart:ui' is unnecessary because all of the used elements are also provided by the import of 'package:flutter/material.dart' - lib\profile\profile\profile_widget.dart:5:8 - unnecessary_import
+warning - Unused import: 'package:provider/provider.dart' - lib\profile\profile\profile_widget.dart:9:8 - unused_import
+   info - Use 'const' with the constructor to improve performance - lib\profile\profile\profile_widget.dart:77:63 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\profile\profile\profile_widget.dart:77:81 - prefer_const_constructors
+   info - Use 'const' literals as arguments to constructors of '@immutable' classes - lib\profile\profile\profile_widget.dart:118:20 - prefer_const_literals_to_create_immutables
+   info - Use 'const' with the constructor to improve performance - lib\profile\profile\profile_widget.dart:127:26 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\profile\profile\profile_widget.dart:134:36 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\profile\profile\profile_widget.dart:141:41 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\profile\profile\profile_widget.dart:153:29 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\profile\profile\profile_widget.dart:177:29 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\profile\profile\profile_widget.dart:186:38 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\profile\profile\profile_widget.dart:217:44 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\profile\profile\profile_widget.dart:219:40 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\profile\profile\profile_widget.dart:226:29 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\profile\profile\profile_widget.dart:250:29 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\profile\profile\profile_widget.dart:259:38 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\profile\profile\profile_widget.dart:290:44 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\profile\profile\profile_widget.dart:292:40 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\profile\profile\profile_widget.dart:302:40 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\profile\profile\profile_widget.dart:315:44 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\profile\profile\profile_widget.dart:317:48 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\profile\profile\profile_widget.dart:352:37 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\profile\profile\profile_widget.dart:353:35 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\profile\profile\profile_widget.dart:361:22 - prefer_const_constructors
+warning - Unused import: '/flutter_flow/flutter_flow_theme.dart' - lib\q_r_scanner\camera_scan\camera_scan_model.dart:2:8 - unused_import
+warning - Unused import: '/flutter_flow/flutter_flow_widgets.dart' - lib\q_r_scanner\camera_scan\camera_scan_model.dart:4:8 - unused_import
+warning - Unused import: 'dart:ui' - lib\q_r_scanner\camera_scan\camera_scan_model.dart:5:8 - unused_import
+warning - Unused import: 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart' - lib\q_r_scanner\camera_scan\camera_scan_model.dart:9:8 - unused_import
+warning - Unused import: 'package:google_fonts/google_fonts.dart' - lib\q_r_scanner\camera_scan\camera_scan_model.dart:10:8 - unused_import
+warning - Unused import: 'package:provider/provider.dart' - lib\q_r_scanner\camera_scan\camera_scan_model.dart:11:8 - unused_import
+   info - The import of 'package:intl/intl.dart' is unnecessary because all of the used elements are also provided by the import of '/flutter_flow/flutter_flow_util.dart' - lib\q_r_scanner\camera_scan\camera_scan_widget.dart:10:8 - unnecessary_import
+warning - Unused import: 'package:provider/provider.dart' - lib\q_r_scanner\camera_scan\camera_scan_widget.dart:11:8 - unused_import
+   info - Use 'const' with the constructor to improve performance - lib\q_r_scanner\camera_scan\camera_scan_widget.dart:37:29 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\q_r_scanner\camera_scan\camera_scan_widget.dart:70:26 - prefer_const_constructors
+   info - Use a 'SizedBox' to add whitespace to a layout - lib\q_r_scanner\camera_scan\camera_scan_widget.dart:75:22 - sized_box_for_whitespace
+   info - Use 'const' with the constructor to improve performance - lib\q_r_scanner\camera_scan\camera_scan_widget.dart:91:32 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\q_r_scanner\camera_scan\camera_scan_widget.dart:103:32 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\q_r_scanner\camera_scan\camera_scan_widget.dart:115:32 - prefer_const_constructors
+warning - The operand can't be 'null', so the condition is always 'true' - lib\q_r_scanner\camera_scan\camera_scan_widget.dart:126:48 - unnecessary_null_comparison
+   info - Don't use 'BuildContext's across async gaps - lib\q_r_scanner\camera_scan\camera_scan_widget.dart:128:29 - use_build_context_synchronously
+warning - The '!' will have no effect because the receiver can't be null - lib\q_r_scanner\camera_scan\camera_scan_widget.dart:131:64 - unnecessary_non_null_assertion
+   info - Use 'const' with the constructor to improve performance - lib\q_r_scanner\camera_scan\camera_scan_widget.dart:138:31 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\q_r_scanner\camera_scan\camera_scan_widget.dart:145:36 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\q_r_scanner\camera_scan\camera_scan_widget.dart:146:40 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\q_r_scanner\camera_scan\camera_scan_widget.dart:157:39 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\q_r_scanner\camera_scan\camera_scan_widget.dart:172:22 - prefer_const_constructors
+

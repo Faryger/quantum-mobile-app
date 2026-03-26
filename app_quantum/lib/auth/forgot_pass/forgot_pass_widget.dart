@@ -263,7 +263,7 @@ class _ForgotPassWidgetState extends State<ForgotPassWidget> {
                         return;
                       }
                       try {
-                        await Supabase.instance.client.auth.resetPasswordForEmail(email);
+                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Restablecimiento deshabilitado')));
                         if (context.mounted) {
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(content: Text('Link de recuperación enviado')),

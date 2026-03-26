@@ -47,8 +47,8 @@ class _NavBarWidgetState extends State<NavBarWidget> {
 
     Color? getIconColor(String pageName) {
       return widget.currentPage == pageName
-          ? FlutterFlowTheme.of(context).primary
-          : FlutterFlowTheme.of(context).primaryText;
+          ? const Color(0xFF14B8A6)
+          : const Color(0xFF94A3B8);
     }
 
     return Padding(
@@ -56,8 +56,15 @@ class _NavBarWidgetState extends State<NavBarWidget> {
       child: Container(
         width: double.infinity,
         decoration: BoxDecoration(
-          color: FlutterFlowTheme.of(context).grayscale400,
+          color: Colors.white,
           borderRadius: BorderRadius.circular(36.5),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.05),
+              blurRadius: 10,
+              offset: const Offset(0, -4),
+            ),
+          ],
         ),
         child: Padding(
           padding: EdgeInsets.all(6.0),
