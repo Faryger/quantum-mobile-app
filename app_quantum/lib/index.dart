@@ -12,3 +12,9 @@ export '/profile/profile/profile_widget.dart' show ProfileWidget;
 export '/pag/resultado_codigo/resultado_codigo_widget.dart'
     show ResultadoCodigoWidget;
 export '/asistencia/asistencia_widget.dart' show AsistenciaWidget;
+export '/views/contract_view.dart' show ContractView;
+export '/views/journey_view.dart' show JourneyView;
+export '/views/permission_view.dart' show PermissionView;
+export '/views/schedule_view.dart' show ScheduleView;
+export '/views/shift_view.dart' show ShiftView;
+export '/views/support_view.dart' show SupportView;

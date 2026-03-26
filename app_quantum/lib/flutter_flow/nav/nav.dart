@@ -93,6 +93,36 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => AsistenciaWidget(),
         ),
         FFRoute(
+          name: ContractView.routeName,
+          path: ContractView.routePath,
+          builder: (context, params) => ContractView(),
+        ),
+        FFRoute(
+          name: JourneyView.routeName,
+          path: JourneyView.routePath,
+          builder: (context, params) => JourneyView(),
+        ),
+        FFRoute(
+          name: PermissionView.routeName,
+          path: PermissionView.routePath,
+          builder: (context, params) => PermissionView(),
+        ),
+        FFRoute(
+          name: ScheduleView.routeName,
+          path: ScheduleView.routePath,
+          builder: (context, params) => ScheduleView(),
+        ),
+        FFRoute(
+          name: ShiftView.routeName,
+          path: ShiftView.routePath,
+          builder: (context, params) => ShiftView(),
+        ),
+        FFRoute(
+          name: SupportView.routeName,
+          path: SupportView.routePath,
+          builder: (context, params) => SupportView(),
+        ),
+        FFRoute(
           name: ResultadoCodigoWidget.routeName,
           path: '${ResultadoCodigoWidget.routePath}/:scannedCode',
           builder: (context, params) => ResultadoCodigoWidget(

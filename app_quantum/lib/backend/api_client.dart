@@ -24,6 +24,12 @@ class ApiClient {
   static Future<void> logout() async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.remove('jwt_token');
+    await prefs.remove('username');
+  }
+
+  static Future<String> getUsername() async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.getString('username') ?? 'Usuario';
   }
 
   static Future<Map<String, String>> _getHeaders() async {
@@ -44,6 +50,9 @@ class ApiClient {
     if (response.statusCode == 200) {
       final data = json.decode(response.body);
       await setToken(data['token']);
+      // Guardar el nombre de usuario para mostrarlo en el home
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setString('username', login);
       return data;
     } else {
       throw Exception('Failed to login (Status ' + response.statusCode.toString() + '): ' + response.body);
