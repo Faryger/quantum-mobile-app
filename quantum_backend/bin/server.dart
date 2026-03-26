@@ -66,5 +66,5 @@ void main(List<String> args) async {
   final port = int.parse(Platform.environment['PORT'] ?? '8085');
   
   final server = await serve(pipeline, ip, port);
-  print('Server listening on port \${server.port}');
+  print('Server listening on port ${server.port}');
 }

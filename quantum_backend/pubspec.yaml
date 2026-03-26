@@ -7,6 +7,7 @@ environment:
   sdk: ^3.10.4
 
 dependencies:
+  bcrypt: ^1.2.0
   crypt: ^4.3.1
   dart_jsonwebtoken: ^3.4.0
   mysql1: ^0.20.0
