@@ -1,14 +1,12 @@
 import 'dart:async';
 import '/components/nav_bar_widget.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
-import 'package:provider/provider.dart';
+import '../../index.dart';
 import 'camera_scan_model.dart';
 export 'camera_scan_model.dart';
 
@@ -34,7 +32,7 @@ class _CameraScanWidgetState extends State<CameraScanWidget> {
     super.initState();
     _model = createModel(context, () => CameraScanModel());
     _timeString = _formatDateTime(DateTime.now());
-    _timer = Timer.periodic(Duration(seconds: 1), (Timer t) => _getTime());
+    _timer = Timer.periodic(const Duration(seconds: 1), (Timer t) => _getTime());
   }
 
   void _getTime() {
@@ -61,70 +59,79 @@ class _CameraScanWidgetState extends State<CameraScanWidget> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        FocusScope.of(context).unfocus();
-        FocusManager.instance.primaryFocus?.unfocus();
-      },
+      onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: Color(0xFF121929),
+        backgroundColor: const Color(0xFFF8FAFC),
         body: Column(
-          mainAxisSize: MainAxisSize.max,
           children: [
             Expanded(
               child: Container(
                 width: double.infinity,
-                height: double.infinity,
+                padding: const EdgeInsets.symmetric(horizontal: 32),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    Container(
+                      padding: const EdgeInsets.all(16),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF14B8A6).withOpacity(0.1),
+                        shape: BoxShape.circle,
+                      ),
+                      child: const Icon(Icons.qr_code_scanner_rounded, color: Color(0xFF14B8A6), size: 40),
+                    ),
+                    const SizedBox(height: 24),
                     Text(
                       'Registrar Asistencia',
-                      style: FlutterFlowTheme.of(context).headlineLarge.override(
-                            font: GoogleFonts.lato(),
-                            color: Colors.white,
-                            fontSize: 32.0,
-                            fontWeight: FontWeight.bold,
-                          ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        _timeString,
-                        style: FlutterFlowTheme.of(context).displayLarge.override(
-                              font: GoogleFonts.lato(),
-                              color: Colors.white,
-                              fontSize: 80.0,
-                              fontWeight: FontWeight.w300,
-                            ),
+                      style: GoogleFonts.outfit(
+                        fontSize: 28,
+                        fontWeight: FontWeight.w800,
+                        color: const Color(0xFF1E293B),
+                        letterSpacing: -0.5,
                       ),
                     ),
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 24.0),
+                    const SizedBox(height: 12),
+                    Text(
+                      _timeString,
+                      style: GoogleFonts.outfit(
+                        fontSize: 72,
+                        fontWeight: FontWeight.w200,
+                        color: const Color(0xFF1E293B),
+                        letterSpacing: -2,
+                      ),
+                    ),
+                    const SizedBox(height: 32),
+                    Container(
+                      padding: const EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(20),
+                        boxShadow: [
+                          BoxShadow(color: Colors.black.withOpacity(0.04), blurRadius: 20, offset: const Offset(0, 10))
+                        ],
+                      ),
                       child: Text(
-                        'Coloca el código QR del empleado frente a la cámara para registrar su entrada o salida.',
+                        'Acercate al QR para escanear la entrada o la salida.',
                         textAlign: TextAlign.center,
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              font: GoogleFonts.lato(),
-                              color: FlutterFlowTheme.of(context).secondaryText,
-                              fontSize: 16.0,
-                            ),
+                        style: GoogleFonts.outfit(
+                          fontSize: 15,
+                          color: const Color(0xFF64748B),
+                          height: 1.5,
+                        ),
                       ),
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(top: 40.0),
-                      child: FFButtonWidget(
-                        onPressed: () async {
-                          _model.resultado =
-                              await FlutterBarcodeScanner.scanBarcode(
-                            '#4CAF50', // scanning line color
-                            'Cancelar', // cancel button text
-                            true, // whether to show the flash icon
-                            ScanMode.QR,
-                          );
+                    const SizedBox(height: 48),
+                    FFButtonWidget(
+                      onPressed: () async {
+                        _model.resultado = await FlutterBarcodeScanner.scanBarcode(
+                          '#14B8A6',
+                          'Cancelar',
+                          true,
+                          ScanMode.QR,
+                        );
 
-                          if (_model.resultado != null &&
-                              _model.resultado != '-1') {
+                        if (_model.resultado != null && _model.resultado != '-1') {
+                          if (context.mounted) {
                             context.pushNamed(
                               ResultadoCodigoWidget.routeName,
                               pathParameters: {
@@ -132,34 +139,18 @@ class _CameraScanWidgetState extends State<CameraScanWidget> {
                               }.withoutNulls,
                             );
                           }
-                          safeSetState(() {});
-                        },
-                        text: 'Escanear QR',
-                        icon: Icon(
-                          Icons.qr_code_scanner,
-                          size: 24.0,
-                        ),
-                        options: FFButtonOptions(
-                          width: MediaQuery.of(context).size.width * 0.6,
-                          height: 60.0,
-                          padding: EdgeInsets.all(0),
-                          iconPadding: EdgeInsets.only(right: 12.0),
-                          color: FlutterFlowTheme.of(context).primary,
-                          textStyle: FlutterFlowTheme.of(context)
-                              .titleMedium
-                              .override(
-                                font: GoogleFonts.lato(),
-                                color: Colors.white,
-                                fontSize: 18.0,
-                                fontWeight: FontWeight.bold,
-                              ),
-                          elevation: 3.0,
-                          borderSide: BorderSide(
-                            color: Colors.transparent,
-                            width: 1.0,
-                          ),
-                          borderRadius: BorderRadius.circular(30.0),
-                        ),
+                        }
+                        setState(() {});
+                      },
+                      text: 'Escanear Código QR',
+                      icon: const Icon(Icons.center_focus_weak_rounded, size: 24),
+                      options: FFButtonOptions(
+                        width: double.infinity,
+                        height: 64,
+                        color: const Color(0xFF14B8A6),
+                        textStyle: const TextStyle(fontFamily: 'Outfit', color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
+                        elevation: 4,
+                        borderRadius: BorderRadius.circular(32),
                       ),
                     ),
                   ],
@@ -168,8 +159,8 @@ class _CameraScanWidgetState extends State<CameraScanWidget> {
             ),
             wrapWithModel(
               model: _model.navBarModel,
-              updateCallback: () => safeSetState(() {}),
-              child: NavBarWidget(),
+              updateCallback: () => setState(() {}),
+              child: const NavBarWidget(currentPage: 'scanner'),
             ),
           ],
         ),

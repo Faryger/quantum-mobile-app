@@ -32,11 +32,16 @@ class ApiClient {
     return prefs.getString('username') ?? 'Usuario';
   }
 
+  static Future<String> getEmail() async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.getString('user_email') ?? 'correo@ejemplo.com';
+  }
+
   static Future<Map<String, String>> _getHeaders() async {
     final token = await getToken();
     return {
       'Content-Type': 'application/json',
-      if (token != null) 'Authorization': 'Bearer \$token',
+      if (token != null) 'Authorization': 'Bearer $token',
     };
   }
 
@@ -50,9 +55,9 @@ class ApiClient {
     if (response.statusCode == 200) {
       final data = json.decode(response.body);
       await setToken(data['token']);
-      // Guardar el nombre de usuario para mostrarlo en el home
       final prefs = await SharedPreferences.getInstance();
       await prefs.setString('username', login);
+      if (data['email'] != null) await prefs.setString('user_email', data['email']);
       return data;
     } else {
       throw Exception('Failed to login (Status ' + response.statusCode.toString() + '): ' + response.body);
@@ -81,6 +86,20 @@ class ApiClient {
   static Future<List<dynamic>> getSchedule() async => _get('/api/schedule');
   static Future<List<dynamic>> getShift() async => _get('/api/shift');
   static Future<List<dynamic>> getSupport() async => _get('/api/support');
+
+  static Future<Map<String, dynamic>> getUserProfile() async {
+    final headers = await _getHeaders();
+    final response = await http.get(Uri.parse('$baseUrl/api/profile'), headers: headers);
+    
+    if (response.statusCode == 200) {
+      final data = json.decode(response.body);
+      final prefs = await SharedPreferences.getInstance();
+      if (data['email'] != null) await prefs.setString('user_email', data['email']);
+      return data;
+    } else {
+      throw Exception('Failed to load profile: ' + response.body);
+    }
+  }
 
   static Future<List<dynamic>> _get(String endpoint) async {
     final headers = await _getHeaders();

@@ -55,24 +55,25 @@ class _AsistenciaWidgetState extends State<AsistenciaWidget> {
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: const Color(0xFFF8FAFC),
         appBar: AppBar(
-          backgroundColor: FlutterFlowTheme.of(context).primary,
+          backgroundColor: Colors.white,
           automaticallyImplyLeading: false,
-          title: Text(
+          title: const Text(
             'Registro de Asistencia',
-            style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  fontFamily: 'Lato',
-                  color: Colors.white,
-                  fontSize: 22.0,
-                ),
+            style: TextStyle(
+              color: Color(0xFF1E293B),
+              fontSize: 20.0,
+              fontWeight: FontWeight.w700,
+            ),
           ),
           centerTitle: false,
-          elevation: 2.0,
+          elevation: 0,
         ),
         body: SafeArea(
           top: true,
           child: RefreshIndicator(
+            color: const Color(0xFF14B8A6),
             onRefresh: () async {
               setState(() {
                 _asistenciaFuture = ApiClient.getAttendance();
@@ -82,70 +83,55 @@ class _AsistenciaWidgetState extends State<AsistenciaWidget> {
               future: _asistenciaFuture,
               builder: (context, snapshot) {
                 if (snapshot.connectionState == ConnectionState.waiting) {
-                  return const Center(child: CircularProgressIndicator());
+                  return const Center(child: CircularProgressIndicator(color: Color(0xFF14B8A6)));
                 }
                 if (snapshot.hasError) {
-                  return Center(child: Text('Error: \${snapshot.error}'));
+                  return Center(child: Text('Error: ${snapshot.error}', style: const TextStyle(color: Colors.red)));
                 }
                 if (!snapshot.hasData || snapshot.data!.isEmpty) {
-                  return Center(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(
-                          Icons.history_toggle_off,
-                          color: FlutterFlowTheme.of(context).secondaryText,
-                          size: 90,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 24.0),
-                          child: Text(
-                            'Aún no hay registros',
-                            style: FlutterFlowTheme.of(context).titleLarge,
-                          ),
-                        ),
-                      ],
-                    ),
-                  );
+                  return const Center(child: Text('Aún no hay registros de asistencia', style: TextStyle(fontFamily: 'Readex Pro')));
                 }
 
                 final asistencias = snapshot.data!;
 
                 return ListView.builder(
-                  padding: EdgeInsets.zero,
+                  padding: const EdgeInsets.all(16),
                   itemCount: asistencias.length,
                   itemBuilder: (context, index) {
                     final asistencia = asistencias[index];
-                    return Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-                      child: Card(
-                        elevation: 4,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child: ListTile(
-                          title: Text(
-                            "User Data ID: \${asistencia['user_data_id'] ?? 'N/A'}",
-                            style: FlutterFlowTheme.of(context).titleLarge,
+                    return Container(
+                      margin: const EdgeInsets.only(bottom: 12),
+                      padding: const EdgeInsets.all(16),
+                      decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(16)),
+                      child: Row(
+                        children: [
+                          Container(
+                            padding: const EdgeInsets.all(10),
+                            decoration: BoxDecoration(color: const Color(0xFF14B8A6).withOpacity(0.1), shape: BoxShape.circle),
+                            child: const Icon(Icons.check_circle_rounded, color: Color(0xFF14B8A6), size: 20),
                           ),
-                          subtitle: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "Entrada: \${_formatDateTime(asistencia['check_in_time'])}",
-                                style: FlutterFlowTheme.of(context).bodyMedium,
-                              ),
-                              Text(
-                                "Salida: \${_formatDateTime(asistencia['departure_time'])}",
-                                style: FlutterFlowTheme.of(context).bodyMedium,
-                              ),
-                              Text(
-                                "Estado: \${asistencia['status'] ?? 'N/A'}",
-                                style: FlutterFlowTheme.of(context).bodySmall,
-                              ),
-                            ],
+                          const SizedBox(width: 16),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Asistencia #${asistencia['id'] ?? 'N/A'}",
+                                  style: const TextStyle(fontFamily: 'Outfit', fontWeight: FontWeight.w700, color: Color(0xFF1E293B)),
+                                ),
+                                const SizedBox(height: 4),
+                                Text(
+                                  "Entrada: ${_formatDateTime(asistencia['check_in_time'])}",
+                                  style: const TextStyle(fontFamily: 'Readex Pro', fontSize: 12, color: Color(0xFF64748B)),
+                                ),
+                                Text(
+                                  "Salida: ${_formatDateTime(asistencia['departure_time'])}",
+                                  style: const TextStyle(fontFamily: 'Readex Pro', fontSize: 12, color: Color(0xFF64748B)),
+                                ),
+                              ],
+                            ),
                           ),
-                        ),
+                        ],
                       ),
                     );
                   },
@@ -157,7 +143,7 @@ class _AsistenciaWidgetState extends State<AsistenciaWidget> {
         bottomNavigationBar: wrapWithModel(
           model: _model.navBarModel,
           updateCallback: () => setState(() {}),
-          child: NavBarWidget(
+          child: const NavBarWidget(
             currentPage: 'asistencia',
           ),
         ),

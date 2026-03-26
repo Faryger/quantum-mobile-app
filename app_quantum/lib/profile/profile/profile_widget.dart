@@ -1,18 +1,11 @@
 import '/components/nav_bar_widget.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import '../../backend/api_client.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:image_picker/image_picker.dart';
-import 'package:provider/provider.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
 import 'profile_model.dart';
 export 'profile_model.dart';
 
-/// Evening Meditation and Relaxation App Interface
 class ProfileWidget extends StatefulWidget {
   const ProfileWidget({super.key});
 
@@ -25,344 +18,179 @@ class ProfileWidget extends StatefulWidget {
 
 class _ProfileWidgetState extends State<ProfileWidget> {
   late ProfileModel _model;
-  String? _avatarUrl;
-
+  String _username = 'Usuario';
+  String _email = 'correo@ejemplo.com';
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
     _model = createModel(context, () => ProfileModel());
+    _loadUserData();
+  }
 
-    // Cargar la URL actual si existe
-    _avatarUrl = null;
+  Future<void> _loadUserData() async {
+    try {
+      final data = await ApiClient.getUserProfile();
+      if (mounted) {
+        setState(() {
+          _username = data['login'] ?? 'Usuario';
+          _email = data['email'] ?? 'correo@ejemplo.com';
+        });
+      }
+    } catch (e) {
+      // Fallback a locales si falla
+      final name = await ApiClient.getUsername();
+      final email = await ApiClient.getEmail();
+      if (mounted) {
+        setState(() {
+          _username = name;
+          _email = email;
+        });
+      }
+    }
   }
 
   @override
   void dispose() {
     _model.dispose();
-
     super.dispose();
-  }
-
-  Future<void> _uploadProfileImage() async {
-    final picker = ImagePicker();
-    final pickedFile = await picker.pickImage(source: ImageSource.gallery);
-
-    if (pickedFile == null) return;
-
-    final bytes = await pickedFile.readAsBytes();
-    final user = null;
-    if (user == null) return;
-
-    try {
-      final fileName = '${user.id}_${DateTime.now().millisecondsSinceEpoch}.jpg';
-      
-      // 1. Subir imagen al bucket 'avatars'
-      // await Supabase.instance.client.storage.from('avatars').uploadBinary(
-      //   fileName,
-      //   bytes,
-      //   fileOptions: const FileOptions(contentType: 'image/jpeg'),
-      // );
-
-      // // 2. Obtener URL pública
-      // final publicUrl = Supabase.instance.client.storage.from('avatars').getPublicUrl(fileName);
-
-      // // 3. Actualizar usuario
-      // await Supabase.instance.client.auth.updateUser(
-      //   UserAttributes(data: {'avatar_url': publicUrl}),
-      // );
-
-      // setState(() => _avatarUrl = publicUrl);
-      
-      if (mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Foto actualizada')));
-    } /*on StorageException catch (e) {
-      if (mounted) {
-        // Manejo específico para errores de Storage (como bucket no encontrado)
-        final message = e.statusCode == '404' ? 'Error: El bucket "avatars" no existe en Supabase.' : 'Error de almacenamiento: ${e.message}';
-        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(message)));
-      }
-    }*/ catch (e) {
-      if (mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Error: $e')));
-    }
   }
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        FocusScope.of(context).unfocus();
-        FocusManager.instance.primaryFocus?.unfocus();
-      },
+      onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: const Color(0xFFF8FAFC),
         appBar: AppBar(
-          backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+          backgroundColor: Colors.white,
           automaticallyImplyLeading: false,
-          title: Text(
-            'Cuenta',
-            style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  font: GoogleFonts.lato(
-                    fontWeight: FontWeight.bold,
-                    fontStyle:
-                        FlutterFlowTheme.of(context).headlineMedium.fontStyle,
-                  ),
-                  color: Colors.white,
-                  fontSize: 24.0,
-                  letterSpacing: 0.0,
-                  fontWeight: FontWeight.bold,
-                  fontStyle:
-                      FlutterFlowTheme.of(context).headlineMedium.fontStyle,
-                ),
+          title: const Text(
+            'Mi Cuenta',
+            style: TextStyle(fontFamily: 'Outfit', color: Color(0xFF1E293B), fontSize: 22, fontWeight: FontWeight.w800),
           ),
-          actions: [],
-          centerTitle: true,
-          elevation: 0.0,
+          elevation: 0,
+          centerTitle: false,
         ),
         body: Column(
-          mainAxisSize: MainAxisSize.max,
           children: [
             Expanded(
-              child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
-                child: SingleChildScrollView(
+              child: SingleChildScrollView(
+                physics: const BouncingScrollPhysics(),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 24.0),
                   child: Column(
-                    mainAxisSize: MainAxisSize.max,
-                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Align(
-                        alignment: AlignmentDirectional(0.0, -1.0),
-                        child: InkWell(
-                          onTap: _uploadProfileImage,
-                          child: Container(
-                            width: 100.0,
-                            height: 100.0,
-                            clipBehavior: Clip.antiAlias,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                            ),
-                            child: Image.network(
-                              _avatarUrl ?? 'https://picsum.photos/seed/674/600',
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 32.0, 0.0, 0.0),
-                        child: Text(
-                          'Email',
-                          style: FlutterFlowTheme.of(context)
-                              .headlineMedium
-                              .override(
-                                font: GoogleFonts.lato(
-                                  fontWeight: FontWeight.bold,
-                                  fontStyle: FlutterFlowTheme.of(context)
-                                      .headlineMedium
-                                      .fontStyle,
+                      const SizedBox(height: 32),
+                      // Avatar Section
+                      Center(
+                        child: Stack(
+                          children: [
+                            Container(
+                              width: 120,
+                              height: 120,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                border: Border.all(color: Colors.white, width: 4),
+                                boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.1), blurRadius: 20, offset: const Offset(0, 10))],
+                                image: const DecorationImage(
+                                  fit: BoxFit.cover,
+                                  image: NetworkImage('https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=200&q=80'),
                                 ),
-                                color: Colors.white,
-                                fontSize: 20.0,
-                                letterSpacing: 0.0,
-                                fontWeight: FontWeight.bold,
-                                fontStyle: FlutterFlowTheme.of(context)
-                                    .headlineMedium
-                                    .fontStyle,
                               ),
+                            ),
+                            Positioned(
+                              bottom: 0,
+                              right: 0,
+                              child: Container(
+                                padding: const EdgeInsets.all(8),
+                                decoration: const BoxDecoration(color: Color(0xFF14B8A6), shape: BoxShape.circle),
+                                child: const Icon(Icons.camera_alt_rounded, color: Colors.white, size: 20),
+                              ),
+                            ),
+                          ],
                         ),
                       ),
-                      Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
-                        child: Container(
+                      const SizedBox(height: 48),
+                      // Info Section
+                      _ProfileInfoCard(label: 'Nombre de Usuario', value: _username, icon: Icons.person_outline_rounded),
+                      const SizedBox(height: 16),
+                      _ProfileInfoCard(label: 'Correo Electrónico', value: _email, icon: Icons.email_outlined),
+                      const SizedBox(height: 16),
+                      _ProfileInfoCard(label: 'Estado', value: 'Activo', icon: Icons.verified_user_outlined),
+                      
+                      const SizedBox(height: 48),
+                      // Logout Button
+                      FFButtonWidget(
+                        onPressed: () async {
+                          await ApiClient.logout();
+                          if (context.mounted) context.goNamed('signIn');
+                        },
+                        text: 'Cerrar Sesión',
+                        options: FFButtonOptions(
                           width: double.infinity,
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context)
-                                .secondaryBackground,
-                            borderRadius: BorderRadius.circular(16.0),
-                          ),
-                          child: Padding(
-                            padding: EdgeInsets.all(16.0),
-                            child: Column(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Expanded(
-                                      child: Text(
-                                        'Usuario',
-                                        style: FlutterFlowTheme.of(context)
-                                            .headlineMedium
-                                            .override(
-                                              font: GoogleFonts.lato(
-                                                fontWeight: FontWeight.normal,
-                                                fontStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .headlineMedium
-                                                        .fontStyle,
-                                              ),
-                                              color: Colors.white,
-                                              fontSize: 17.0,
-                                              letterSpacing: 0.0,
-                                              fontWeight: FontWeight.normal,
-                                              fontStyle:
-                                                  FlutterFlowTheme.of(context)
-                                                      .headlineMedium
-                                                      .fontStyle,
-                                            ),
-                                      ),
-                                    ),
-                                  ].divide(SizedBox(width: 16.0)),
-                                ),
-                              ].divide(SizedBox(height: 20.0)),
-                            ),
-                          ),
+                          height: 56,
+                          color: const Color(0xFFEF4444).withOpacity(0.1),
+                          textStyle: const TextStyle(fontFamily: 'Outfit', color: Color(0xFFEF4444), fontWeight: FontWeight.w700, fontSize: 16),
+                          elevation: 0,
+                          borderSide: const BorderSide(color: Color(0xFFEF4444), width: 1),
+                          borderRadius: BorderRadius.circular(16),
                         ),
                       ),
-                      Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 32.0, 0.0, 0.0),
-                        child: Text(
-                          'Area',
-                          style: FlutterFlowTheme.of(context)
-                              .headlineMedium
-                              .override(
-                                font: GoogleFonts.lato(
-                                  fontWeight: FontWeight.bold,
-                                  fontStyle: FlutterFlowTheme.of(context)
-                                      .headlineMedium
-                                      .fontStyle,
-                                ),
-                                color: Colors.white,
-                                fontSize: 20.0,
-                                letterSpacing: 0.0,
-                                fontWeight: FontWeight.bold,
-                                fontStyle: FlutterFlowTheme.of(context)
-                                    .headlineMedium
-                                    .fontStyle,
-                              ),
-                        ),
-                      ),
-                      Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
-                        child: Container(
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context)
-                                .secondaryBackground,
-                            borderRadius: BorderRadius.circular(16.0),
-                          ),
-                          child: Padding(
-                            padding: EdgeInsets.all(16.0),
-                            child: Column(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Expanded(
-                                      child: Text(
-                                        'Recursos Humanos',
-                                        style: FlutterFlowTheme.of(context)
-                                            .headlineMedium
-                                            .override(
-                                              font: GoogleFonts.lato(
-                                                fontWeight: FontWeight.normal,
-                                                fontStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .headlineMedium
-                                                        .fontStyle,
-                                              ),
-                                              color: Colors.white,
-                                              fontSize: 17.0,
-                                              letterSpacing: 0.0,
-                                              fontWeight: FontWeight.normal,
-                                              fontStyle:
-                                                  FlutterFlowTheme.of(context)
-                                                      .headlineMedium
-                                                      .fontStyle,
-                                            ),
-                                      ),
-                                    ),
-                                  ].divide(SizedBox(width: 16.0)),
-                                ),
-                              ].divide(SizedBox(height: 20.0)),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Row(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Expanded(
-                            child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 16.0, 0.0, 0.0),
-                              child: FFButtonWidget(
-                                onPressed: () async {
-                                  await ApiClient.logout();
-                                  if (context.mounted) {
-                                    context.goNamed('signIn');
-                                  }
-                                },
-                                text: 'Cerrar Sesion',
-                                options: FFButtonOptions(
-                                  width: double.infinity,
-                                  height: 40.0,
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      16.0, 0.0, 16.0, 0.0),
-                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 0.0),
-                                  color: FlutterFlowTheme.of(context)
-                                      .primaryBackground,
-                                  textStyle: FlutterFlowTheme.of(context)
-                                      .titleSmall
-                                      .override(
-                                        font: GoogleFonts.lato(
-                                          fontWeight:
-                                              FlutterFlowTheme.of(context)
-                                                  .titleSmall
-                                                  .fontWeight,
-                                          fontStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .titleSmall
-                                                  .fontStyle,
-                                        ),
-                                        color: Colors.white,
-                                        letterSpacing: 0.0,
-                                        fontWeight: FlutterFlowTheme.of(context)
-                                            .titleSmall
-                                            .fontWeight,
-                                        fontStyle: FlutterFlowTheme.of(context)
-                                            .titleSmall
-                                            .fontStyle,
-                                      ),
-                                  elevation: 0.0,
-                                  borderRadius: BorderRadius.circular(8.0),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ]
-                        .addToStart(SizedBox(height: 20.0))
-                        .addToEnd(SizedBox(height: 20.0)),
+                      const SizedBox(height: 40),
+                    ],
                   ),
                 ),
               ),
             ),
             wrapWithModel(
               model: _model.navBarModel,
-              updateCallback: () => safeSetState(() {}),
-              child: NavBarWidget(),
+              updateCallback: () => setState(() {}),
+              child: const NavBarWidget(currentPage: 'profile'),
             ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class _ProfileInfoCard extends StatelessWidget {
+  final String label;
+  final String value;
+  final IconData icon;
+
+  const _ProfileInfoCard({required this.label, required this.value, required this.icon});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.all(20),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: const Color(0xFFF1F5F9), width: 1.5),
+      ),
+      child: Row(
+        children: [
+          Container(
+            padding: const EdgeInsets.all(10),
+            decoration: BoxDecoration(color: const Color(0xFFF1F5F9), borderRadius: BorderRadius.circular(12)),
+            child: Icon(icon, color: const Color(0xFF64748B), size: 22),
+          ),
+          const SizedBox(width: 16),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(label, style: const TextStyle(fontFamily: 'Readex Pro', fontSize: 11, color: Color(0xFF94A3B8), fontWeight: FontWeight.w500)),
+              const SizedBox(height: 4),
+              Text(value, style: const TextStyle(fontFamily: 'Outfit', fontSize: 16, fontWeight: FontWeight.w700, color: Color(0xFF1E293B))),
+            ],
+          ),
+        ],
       ),
     );
   }

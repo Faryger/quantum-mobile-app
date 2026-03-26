@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import '../backend/api_client.dart';
+import '../components/nav_bar_widget.dart';
+import '../flutter_flow/flutter_flow_util.dart';
+import '../home/home_page/home_page_model.dart';
 
 class PermissionView extends StatefulWidget {
   const PermissionView({super.key});
@@ -12,39 +15,71 @@ class PermissionView extends StatefulWidget {
 
 class _PermissionViewState extends State<PermissionView> {
   late Future<List<dynamic>> _futureData;
+  late HomePageModel _navModel;
 
   @override
   void initState() {
     super.initState();
     _futureData = ApiClient.getPermissions();
+    _navModel = createModel(context, () => HomePageModel());
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Permissions')),
+      backgroundColor: const Color(0xFFF8FAFC),
+      appBar: AppBar(
+        title: const Text('Detalle de Permisos', style: TextStyle(fontFamily: 'Outfit', fontWeight: FontWeight.w700)),
+        backgroundColor: Colors.white,
+        elevation: 0,
+        foregroundColor: const Color(0xFF1E293B),
+      ),
       body: FutureBuilder<List<dynamic>>(
         future: _futureData,
         builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) return const Center(child: CircularProgressIndicator());
-          if (snapshot.hasError) return Center(child: Text('Error: \${snapshot.error}'));
-          if (!snapshot.hasData || snapshot.data!.isEmpty) return const Center(child: Text('Sin registros'));
+          if (snapshot.connectionState == ConnectionState.waiting) return const Center(child: CircularProgressIndicator(color: Color(0xFF14B8A6)));
+          if (snapshot.hasError) return Center(child: Text('Error: ${snapshot.error}', style: const TextStyle(color: Colors.red)));
+          if (!snapshot.hasData || snapshot.data!.isEmpty) return const Center(child: Text('Sin registros de detalle', style: TextStyle(fontFamily: 'Readex Pro')));
 
           final data = snapshot.data!;
           return ListView.builder(
+            padding: const EdgeInsets.all(16),
             itemCount: data.length,
             itemBuilder: (context, index) {
               final item = data[index];
-              return Card(
-                margin: const EdgeInsets.all(8),
-                child: ListTile(
-                  title: Text("Permiso ID: \${item['id'] ?? 'N/A'} - Usuario Data ID: \${item['user_data_id'] ?? 'N/A'}"),
-                  subtitle: Text("Razón: \${item['personal_reason'] ?? item['family_situation_detail']}\nFechas: \${item['init_date']} a \${item['end_date']}"),
+              return Container(
+                margin: const EdgeInsets.only(bottom: 12),
+                padding: const EdgeInsets.all(16),
+                decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(16)),
+                child: Row(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.all(10),
+                      decoration: BoxDecoration(color: const Color(0xFF14B8A6).withOpacity(0.1), shape: BoxShape.circle),
+                      child: const Icon(Icons.person_search_rounded, color: Color(0xFF14B8A6), size: 20),
+                    ),
+                    const SizedBox(width: 16),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("ID: ${item['id']}", style: const TextStyle(fontWeight: FontWeight.w700, color: Color(0xFF1E293B))),
+                          Text("Desde: ${item['init_date']}", style: const TextStyle(fontSize: 12, color: Color(0xFF64748B))),
+                          Text("Hasta: ${item['end_date']}", style: const TextStyle(fontSize: 12, color: Color(0xFF64748B))),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               );
             },
           );
         },
+      ),
+      bottomNavigationBar: wrapWithModel(
+        model: _navModel.navBarModel,
+        updateCallback: () => setState(() {}),
+        child: const NavBarWidget(),
       ),
     );
   }
