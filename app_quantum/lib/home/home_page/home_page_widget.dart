@@ -150,7 +150,7 @@ class _TopBar extends StatelessWidget {
         CircleAvatar(
           radius: 20,
           backgroundColor: const Color(0xFFE2E8F0),
-          backgroundImage: const NetworkImage('https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=100&q=80'),
+          backgroundImage: const NetworkImage('https://cdn-icons-png.flaticon.com/512/149/149071.png'),
         ),
       ],
     );
