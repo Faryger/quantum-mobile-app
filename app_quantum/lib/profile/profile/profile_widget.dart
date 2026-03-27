@@ -86,24 +86,31 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                       const SizedBox(height: 32),
                       // Avatar Section
                       Center(
-                        child: Container(
-                          width: 120,
-                          height: 120,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            border: Border.all(color: Colors.white, width: 4),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black.withOpacity(0.05),
-                                blurRadius: 20,
-                                offset: const Offset(0, 10),
-                              )
-                            ],
-                            image: const DecorationImage(
-                              fit: BoxFit.cover,
-                              image: NetworkImage('https://cdn-icons-png.flaticon.com/512/149/149071.png'),
+                        child: Stack(
+                          children: [
+                            Container(
+                              width: 120,
+                              height: 120,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                border: Border.all(color: Colors.white, width: 4),
+                                boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.1), blurRadius: 20, offset: const Offset(0, 10))],
+                                image: const DecorationImage(
+                                  fit: BoxFit.cover,
+                                  image: NetworkImage('https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=200&q=80'),
+                                ),
+                              ),
                             ),
-                          ),
+                            Positioned(
+                              bottom: 0,
+                              right: 0,
+                              child: Container(
+                                padding: const EdgeInsets.all(8),
+                                decoration: const BoxDecoration(color: Color(0xFF14B8A6), shape: BoxShape.circle),
+                                child: const Icon(Icons.camera_alt_rounded, color: Colors.white, size: 20),
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                       const SizedBox(height: 48),
